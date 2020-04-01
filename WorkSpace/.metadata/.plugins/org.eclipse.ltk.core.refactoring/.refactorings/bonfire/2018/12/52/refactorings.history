@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 10 elements to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;bonfire&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     account.html&#x0D;&#x0A;     single.html&#x0D;&#x0A;     checkout.html&#x0D;&#x0A;     wishlist.html&#x0D;&#x0A;     contact.html&#x0D;&#x0A;     products.html&#x0D;&#x0A;     index.html&#x0D;&#x0A;     js&#x0D;&#x0A;     css&#x0D;&#x0A;     images" description="Copy elements" element1="account.html" element10="images" element2="single.html" element3="checkout.html" element4="wishlist.html" element5="contact.html" element6="products.html" element7="index.html" element8="js" element9="css" files="7" flags="589830" folders="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1545829204589" target="/LTW/WebContent" units="0" version="1.0"/>
+</session>

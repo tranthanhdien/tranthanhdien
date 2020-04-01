@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Lab 3</title>
+<meta name="keywords"
+	content="Intrend Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript">
+	
+	
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);	
+		}
+
+</script>
+
+<!-- css files -->
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+<
+style type ="text /css">.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: inherit;
+	font-family: "Times New Roman", Times, serif;
+}
+
+h6.agileinfo-title {
+	font-size: 3em;
+}
+
+/* team */
+.team-grids {
+	position: relative;
+	overflow: hidden;
+}
+
+.team-grids h4 {
+	font-size: 1.1em;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.team-grids h6 {
+	font-size: 1em;
+	color: #03cce6;
+	letter-spacing: 2px;
+}
+
+.social-icons-section a {
+	color: #ccc;
+}
+
+.social-icons-section a:hover {
+	color: #fff;
+}
+
+.team-info {
+	position: absolute;
+	bottom: -227px;
+	margin: 0;
+	left: 15px;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: 3px solid #fff;
+	padding: 1em;
+	-webkit-transition: .5s all;
+	transition: .5s all;
+	-moz-transition: .5s all;
+	width: 92%;
+	text-align: center;
+}
+
+.team-grids:hover div.team-info {
+	bottom: 0px;
+}
+
+.team-grids:hover {
+	border-color: #76daff;
+}
+
+.social-icons-section, .team-grids h6 {
+	margin-top: 0.5em;
+}
+
+.caption {
+	padding: 0px;
+}
+
+.team-info .social-icons-section a {
+	margin: 0em .5em;
+}
+
+/* //team */
+/* team responsive */
+@media ( max-width :1080px) {
+	.team-grids h4 {
+		font-size: 1em;
+	}
+	.about_grids h3 {
+		font-size: 22px;
+	}
+}
+
+@media ( max-width :1024px) {
+	.team-info {
+		width: 91%;
+	}
+}
+
+@media ( max-width :991px) {
+	.team-info {
+		width: 88%;
+	}
+}
+
+@media ( max-width :736px) {
+	.team-info {
+		width: 65%;
+		left: 95px;
+	}
+}
+
+@media ( max-width :480px) {
+	.team-info {
+		width: 76%;
+		left: 56px;
+	}
+}
+
+@media ( max-width :440px) {
+	.team-info {
+		width: 83%;
+		left: 36px;
+	}
+}
+
+@media ( max-width :414px) {
+	.team-info {
+		width: 89%;
+		left: 24px;
+	}
+}
+
+@media ( max-width :384px) {
+	.team-info {
+		width: 92%;
+		left: 14px;
+	}
+}
+
+@media ( max-width :320px) {
+	.team-info {
+		width: 90%;
+		left: 15px;
+	}
+}
+
+/* //team responsive */
+/* heading title */
+h3.title {
+	color: #000;
+	font-size: 42px;
+}
+
+.w3ls-titles span {
+	position: relative;
+}
+
+.w3ls-titles span:before {
+	content: " ";
+	background: #d6d6d6;
+	width: 64px;
+	height: 2px;
+	position: absolute;
+	top: 9px;
+	left: -75px;
+}
+
+.w3ls-titles span:after {
+	content: " ";
+	background: #d6d6d6;
+	width: 64px;
+	height: 2px;
+	position: absolute;
+	top: 9px;
+	right: -75px;
+}
+
+.w3ls-titles i {
+	color: #f44336;
+	font-size: 26px;
+	margin-top: 5px;
+}
+
+/* Style the subtab cap 2*/
+.tabsub {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Style the buttons inside the tab */
+.tabsub button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Change background color of buttons on hover */
+.tabsub button:hover {
+	background-color: #BBBBBB;
+}
+
+/* Create an active/current tablink class */
+.tabsub button.active {
+	background-color: #9FB6CD;
+}
+
+/* Style the tab content */
+.subtabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 2px solid #ccc;
+	border-top: none;
+	background-color: #9FB6CD;
+}
+
+/* Style the close button */
+.toprightsub {
+	float: right;
+	cursor: pointer;
+	font-size: 28px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.toprightsub:hover {
+	color: red;
+}
+
+.btnsub {
+	background-color: DodgerBlue;
+	border: none;
+	color: white;
+	padding: 12px 30px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btnsub:hover {
+	background-color: RoyalBlue;
+}
+
+/*het cai tab */
+
+/* Style the subtab cap 3 */
+.tabsubsub {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #B5B5B5;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Style the buttons inside the tab */
+.tabsubsub button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Change background color of buttons on hover */
+.tabsubsub button:hover {
+	background-color: #4F4F4F;
+}
+
+/* Create an active/current tablink class */
+.tabsubsub button.active {
+	background-color: #9FB6CD;
+}
+
+/* Style the tab content */
+.subsubtabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 2px solid #ccc;
+	border-top: none;
+	background-color: #9FB6CD;
+}
+
+/* Style the close button */
+.toprightsubsub {
+	float: right;
+	cursor: pointer;
+	font-size: 28px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.toprightsubsub:hover {
+	color: red;
+}
+
+.btnsubsub {
+	background-color: DodgerBlue;
+	border: none;
+	color: white;
+	padding: 12px 30px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btnsubsub:hover {
+	background-color: RoyalBlue;
+}
+
+/*het cai tab */
+.inner-banner-w3ls {
+	background: url('image/bg.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	min-height: 250px;
+	border-bottom: 3px solid #00d255;
+}
+
+.breadcrumb-nav+.breadcrumb-nav::before {
+	display: inline-block;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+	color: #fff;
+	content: "//";
+}
+</style>
+</head>
+<body>
+	<div>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" id="menuleft" href="#">Human Computer
+						Interaction</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right" id="menuu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Labs<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="lab1.html">Lab1</a></li>
+							<li><a href="lab2.html">Lab2</a></li>
+							<li><a href="lab3.html">Lab3</a></li>
+							<li><a href="lab4.html">Lab4</a></li>
+							<li><a href="lab5.html">Lab5</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<ul class="breadcrumb" style="margin-top: -18px;">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="#">Labs</a></li>
+		<li><a href="lab3.html">Lab3</a></li>
+
+	</ul>
+	<div style="margin-top: -10px; margin-left: 40%; font-size: 20px;">
+		<a href="lab1.html">Lab1 &raquo;</a> <a href="lab2.html">Lab2
+			&raquo;</a> <a href="lab3.html">Lab3 &raquo;</a> <a href="lab4.html">Lab4
+			&raquo;</a><a href="lab5.html">Lab5
+			&raquo;</a>
+	</div>
+
+
+	<div class="tab">
+		<button class="tablinks" onclick="openCity(event, 'requirement')"
+			id="defaultOpen">Requirement</button>
+		<button class="tablinks" onclick="openCity(event, 'ex1')">Ex1:
+			The F pattern</button>
+		<button class="tablinks" onclick="openCity(event, 'ex2')">Ex2:
+			The Z pattern</button>
+
+	</div>
+
+
+	<div id="requirement" class="tabcontent">
+		<br> <span onclick="this.parentElement.style.display='none'"
+			class="topright">&times</span>
+
+		<div style="margin-left: 50px;">
+			<ul>
+				<table>
+					<tbody>
+						<tr>
+							<td style="font-size: 16px;">1) Trong menu Exercises (hoặc
+								Labs), tạo 1 menu Lab3 (file lab3.html) sau đó tạo 2 tab Bài 1,
+								Bài 2.</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">-Ex1: Thiết kế một trang Web
+								đơn giản sử dụng mẫu F-pattern ==> chuyển sang html (ex1.html)</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">-Ex2: Thiết kế một trang Web sử
+								dụng mẫu Z-pattern ==> chuyển sang html (ex2.html)</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">2) Với cả Ex1, Ex2: Tạo 2 tab
+								Design và Implementation:</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">-Design: chụp lại hình ảnh để
+								có cái nhìn tổng quan về file thiết kế, có nút Download để
+								download file thiết kế về nếu muốn.</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">-Implementation: nội dung phần
+								hiện thực trên html</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px;">3) Upload lên Azure</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+
+
+		</div>
+
+	</div>
+
+	<!-- ex1  -->
+
+	<div id="ex1" class="tabcontent">
+		<br> <span onclick="this.parentElement.style.display='none'"
+			class="topright">&times</span>
+
+		<!-- tabs con trong ex1  -->
+		<div class="tabsub">
+			<button class="subtablinks" onclick="openSubCity(event, 'designEx1')"
+				id="subdefaultOpen">Design</button>
+			<button class="subtablinks"
+				onclick="openSubCity(event, 'implementEx1')">Implementation</button>
+
+		</div>
+
+		<div id="designEx1" class="subtabcontent">
+			<h4 class="title-design">Design on Paper</h4>
+			<img style="margin-left: 25%;" src="img/imgex2/ex2.jpg" alt="">
+			<div style="margin-left: 45%;">
+				<br> <a href="img/imgex2/ex2.psd" target="_blank"
+					class="btn btn-success btn-lg"> <span
+					class="glyphicon glyphicon-download"></span> Download
+				</a>
+			</div>
+			<h4 class="title-design">Design on Photoshop</h4>
+			<div class="blocking">
+				<!--<img class="imgdraw" alt="bản vẽ">-->
+				<img style="margin-left: 11%; margin-top: -10px;" class="imgdesign"
+					src="img/imgex2/FPattern.jpg" alt="thiết kế">
+				<div style="margin-left: 45%;">
+					<br> <a href="img/imgex2/ex2.psd" target="_blank"
+						class="btn btn-success btn-lg"> <span
+						class="glyphicon glyphicon-download"></span> Download
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- tab implement ex1 -->
+
+		<div id="implementEx1" class="subtabcontent">
+			<span onclick="this.parentElement.style.display='none'"
+				class="toprightsub">&times</span>
+			<iframe src="ex2.html" style="height: 600px; width: 100%;">
+			</iframe>
+
+		</div>
+	</div>
+
+
+
+
+	<!-- tabs ex2 -->
+
+	<div id="ex2" class="tabcontent">
+		<span onclick="this.parentElement.style.display='none'"
+			class="topright">&times</span>
+
+
+		<!-- tabs con trong ex2  -->
+		<div class="tabsub">
+			<button class="subtablinks" onclick="openSubCity(event, 'designEx2')"
+				id="subdefaultOpen">Design</button>
+			<button class="subtablinks"
+				onclick="openSubCity(event, 'implementEx2')">Implementation</button>
+
+		</div>
+
+
+		<div id="designEx2" class="subtabcontent">
+
+			<h4 class="title-design">Design on Paper</h4>
+			<img style="margin-left: 23%;" src="img/imgex1/ex1.jpg" alt="">
+			<div style="margin-left: 45%;">
+			<br>
+				<a href="img/imgex1/ZPatt.psd" target="_blank"
+					class="btn btn-success btn-lg"> <span
+					class="glyphicon glyphicon-download"></span> Download
+				</a>
+			</div>
+			<h4 class="title-design">Design on Photoshop</h4>
+			<div class="blocking">
+				<!--<img class="imgdraw" alt="bản vẽ">-->
+				<img style="margin-left: 11%; margin-top: -10px;" class="imgdesign"
+					src="img/imgex1/ZPatt.jpg" alt="thiết kế">
+				<div style="margin-left: 45%;">
+			<br>
+					<a href="img/imgex1/Zpatt.psd" target="_blank"
+						class="btn btn-success btn-lg"> <span
+						class="glyphicon glyphicon-download"></span> Download
+					</a>
+				</div>
+			</div>
+			<!-- noi dung hien thi  -->
+		</div>
+	</div>
+	<!-- tab implement ex1 -->
+	<div id="implementEx2" class="subtabcontent">
+		<span onclick="this.parentElement.style.display='none'"
+			class="toprightsub">&times</span>
+		<iframe src="ex1.html" style="height: 600px; width: 100%;"> </iframe>
+	</div>
+
+
+	<script>
+		includeHTML();
+	</script>
+
+	<!-- tab cap 1 -->
+	<script>
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
+
+	<!-- tab cap 2 -->
+	<script>
+		function openSubCity(evt, cityName) {
+			var i, subtabcontent, subtablinks;
+			subtabcontent = document.getElementsByClassName("subtabcontent");
+			for (i = 0; i < subtabcontent.length; i++) {
+				subtabcontent[i].style.display = "none";
+			}
+			subtablinks = document.getElementsByClassName("subtablinks");
+			for (i = 0; i < subtablinks.length; i++) {
+				subtablinks[i].className = subtablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("subdefaultOpen").click();
+	</script>
+
+	<!-- tab cap 3  -->
+	<script>
+		function openSubSubCity(evt, cityName) {
+			var i, subsubtabcontent, subsubtablinks;
+			subsubtabcontent = document
+					.getElementsByClassName("subsubtabcontent");
+			for (i = 0; i < subsubtabcontent.length; i++) {
+				subsubtabcontent[i].style.display = "none";
+			}
+			subsubtablinks = document.getElementsByClassName("subsubtablinks");
+			for (i = 0; i < subsubtablinks.length; i++) {
+				subsubtablinks[i].className = subsubtablinks[i].className
+						.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("subsubdefaultOpen").click();
+	</script>
+
+
+
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!-- Necessary-JavaScript-File-For-Bootstrap -->
+	<!-- //js -->
+
+	<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+
+	<!-- //js-scripts -->
+</body>
+</html>

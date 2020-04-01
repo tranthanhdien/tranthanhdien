@@ -1,0 +1,65 @@
+/* Style the tab */
+.tabsub {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Style the buttons inside the tab */
+.tabsub button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+/* Change background color of buttons on hover */
+.tabsub button:hover {
+	background-color: #BBBBBB;
+}
+
+/* Create an active/current tablink class */
+.tabsub button.active {
+	background-color: #BBBBBB;
+}
+
+/* Style the tab content */
+.tabcontentsub {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: #e9ebee;
+}
+
+/* Style the close button */
+.toprightsub {
+	float: right;
+	cursor: pointer;
+	font-size: 28px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.toprightsub:hover {
+	color: red;
+}
+
+.btnsub {
+	background-color: DodgerBlue;
+	border: none;
+	color: white;
+	padding: 12px 30px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btnsub:hover {
+	background-color: RoyalBlue;
+}

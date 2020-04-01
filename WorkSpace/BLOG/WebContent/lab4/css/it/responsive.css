@@ -1,0 +1,177 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .mobile{display: block !important;}
+  .desktop{display: none !important;}
+  .navbar .container-fluid{padding-right: 0;}
+   .modal.modal-menu .modal-body{padding: 0;}
+   .modal.modal-menu .menu-header {
+       padding-left: 20px;
+       font-weight: 700;
+       color: #616161;
+   }
+   .modal.modal-menu button.close {
+       top: 8px;
+       right: 12px;
+       position: absolute;
+       font-size: 32px;
+       font-weight: 100;
+   }
+   .horizontal-navbar .mobile-nav li {
+       float: right;
+       height: 60px;
+       color: #fff;
+       margin-left: 0;
+   }
+   .horizontal-navbar .mobile-nav li a {color: #6f6f6f;padding: 20px 10px; display: inline-block;; outline: none;}
+   .horizontal-navbar .mobile-nav li.mobile-logo a{padding: 5px 0 0}
+   .horizontal-navbar .mobile-nav li a:focus,.horizontal-navbar .mobile-nav li a:hover{color:#6f6f6f; outline: none;}
+   .horizontal-navbar .mobile-nav li a span i{color: rgb(66, 183, 42); font-size: 10px;margin-left: -8px}
+   .horizontal-navbar .mobile-nav li a span i.fa-check-circle:before{background-color: #fff; border-radius: 50%;}
+   .mobile-logo {
+       padding: 12px 0 10px 15px;
+       margin-left: 0;
+       border-right: 1px solid #F5F5F5;
+   }
+   .horizontal-navbar .mobile-nav li:first-child{padding: 10px 0 0 0;}
+   .modal.modal-menu .modal-content{height: 100%; border: 0; border-radius: 0; min-height: 100%}
+   .modal.modal-menu .modal-dialog{margin: 0;padding: 0;height: 100%}
+   .modal.modal-menu li {
+       border-bottom: 1px solid #eee;
+       padding: 15px 15px 15px 0;
+   }
+   .modal.modal-menu li.open{background-color: #f5f5f5}
+   .modal.modal-menu li>a {color: #555;display: block; padding: 0 20px; font-size: 16px}
+   .modal.modal-menu li.menu-header>a{padding-left: 0;}
+   .modal.modal-menu li>a:hover {color: #065b89;display: block;}
+   .modal.modal-menu .dropdown-menu{max-width: 100%; width: 100%;border-radius: 0; border: 0;padding: 0;margin: 0;background-color: #f5f5f5}
+   .modal.modal-menu .dropdown-menu li{padding: 0;}
+   .modal.modal-menu .dropdown-menu li a{padding: 13px 10px 13px 25px;}
+   .modal.modal-menu .dropdown-menu li:hover, .modal.modal-menu .dropdown-menu li a:hover{background-color: #fff}
+
+   .mobile-nav .mobile-logo img{height: 30px;}
+   .mobile-nav .mobile-logo a{float: left}
+   .itw_search_jobs{padding: 0;}
+   .itw_total_jobs p{font-size: 20px;}
+   .itw_location_selection{padding: 0; margin: 10px 0}
+   .itw_trending_skills_blogs{padding: 0;}
+   .itw_trending_skills{padding: 0;}
+   .itw_trending_skills ul{width: 100%; float: left;}
+   .itw_trending_skills ul li{width: 33.3333%; margin-bottom:20px; flex:initial; display: inline-block; margin: auto;}
+   .itw_trending_skills ul li:last-child{margin-bottom: 5px}
+   .itw_trending_skills img{width: 65px;}
+   .itw_user_used_skill{display: none;}
+   .itw_user_used_skill_info{padding: 8px 4px; clear: both;display: inline-block; width: 100%;}
+   .itw_user_used_skill_info p{line-height:30px; text-align: center; width: 100%; padding: 0; font-size: 14px;}
+   .itw_user_used_skill{padding: 0 15px;}
+   .itw_avatar{display: none;}
+   .itw_technology_curb{padding: 20px 0 0; text-align: center;}
+   .itw_technology_curb span.aquote{background-image: url(../img/ic_quote_white.png); text-align: center;  padding-left: 25px; background-position: 0 0; background-size: 30px; max-width: 100%; float: none; width: 95%}
+   .itw_technology_curb p{font-size: 22px;color: rgba(255,255,255, 0.6)}
+   .itw_technology_curb p span{color: #ffc107;}   
+   .itw_hot_blogs{padding:30px 15px 0; text-align: center; background: url(../img/hero_banner_bottom_bg.png) #1f3859 left bottom repeat-x;}
+   .itw_hot_blogs_container{margin: auto; text-align: left; float: none; width: 100%;}
+   .itw_jobs_listing{padding: 0 0 20px;}
+   .itw_view_more_jobs{padding-top: 0;}
+   .itw_company_profile .col-xs-12{padding: 0;}
+   .itw_company_profile h2{font-size: 22px; padding: 0 15px;}
+   .itw_company_profile p.description{padding: 5px 15px 0 15px}
+   .itw_company_profile p.description{font-size: 16px;}
+   .itw_company_profile ul,
+   .itw_company_profile li{display: block; margin-bottom: 0;}
+   .itw_company_profile_item{margin-bottom: 20px;}
+   .itw_take_survey h2{font-size: 22px; padding: 0 15px;}
+   .itw_take_survey h2 span{background-size: 30px; background-position: 0 0; padding-left: 35px; text-align: left;}
+   .itw_btn_take_survey a{width: 100%;}
+   .itw_trending_skills h3{font-size: 18px; padding-bottom: 30px;}
+   .itw_hero_banner_left_side{padding: 20px 0 0;}
+   .itw_hero_banner_container .container{padding: 0;}
+   .itw_search_jobs{padding: 0 15px;}
+   .itw_trending_skills{padding: 35px 15px 0}
+   .itw_technology_curb{padding: 35px 15px 0; background-color: #1f3859; margin-top: 35px}
+   footer .col-xs-12{padding: 0;}
+   .itw_footer{padding: 15px 0 25px; text-align: center}
+   .itw_footer_logo{margin: 0; padding: 20px 0 0 !important}
+   .itw_footer_logo img{width: 120px; display: inline-block; clear: none; margin: 0 10px 0 0 !important}
+   .itw_footer_menu{display: none;}
+   .itw_footer_logo h2,
+   .itw_footer_about h2{display: none;}
+   .itw_about_us_page .container{padding: 0}
+   .itw_our_team .col-xs-12{padding: 0}
+   .itw_our_stories h2, .itw_our_team h2{font-size: 22px;}
+   .itw_team_member .itw_member_avatar{width: 100%; height: 120px}
+   .itw_team_member .itw_member_info{width: 100%; margin-left: 0; text-align: center;}
+
+   /* customize select 2 for search form */
+  body + .select2-container--open, html + .select2-container--open{overflow-x: hidden;position: relative;}
+  .select2-container{ top: 0!important; left: 0 !important; bottom: 0; right: 0; background-color: #fff;}
+  .select2-container--open{position: fixed !important; z-index: 99999; padding-top: 50px;}
+  .select2-container--open .select2-dropdown--below{width: 100% !important}
+  .select2-container--open .select2-dropdown{width: 100% !important}
+  .select2-dropdown{box-shadow: none;}
+  .select2-search--dropdown{padding: 15px 4px;}
+  .select2-container--open .select2-dropdown{position: inherit; padding: 20px;}
+  .close-select2{position: absolute; right: 10px; top: 10px; z-index: 99999; display: none; width: 30px; color: #cccccc; height: 30px; cursor: pointer; line-height: 30px; text-align: center; font-size: 32px; font-weight: 100;}
+  .select2-container--open .close-select2{display: inline-block;}
+
+  .link-listing-item{border-bottom: 1px dashed #1B3C65;  padding: 0; }
+  .link-listing-item h2{background: url("/static/img/menu_ic.png") right -1037px no-repeat; background-size: 150px; color: rgba(255,255,255, 0.5);}
+  .link-listing-item.open h2{background-position: right -1113px; color: #ffffff}
+  .link-listing-item:last-child{border-bottom:0;}
+  .footer_link_section{padding: 50px 0 30px}
+  .footer_link_section .link-listing{height: 0; overflow: hidden;  transition: all 0.8s linear;}
+  .link-listing-item.open .link-listing{display: block;  height: 210px; padding: 0 0 20px 15px; transition: all 0.8s linear;}
+  .footer_link_section h2{padding: 15px 0 17px;margin-bottom: 0}
+  .footer_link_section .link-listing h2{padding-bottom: 0}
+}
+@media (min-width: 768px) and (max-width: 944px) {
+   .navbar-brand img{height: 25px}
+   .itw_main_nav>li>a{padding: 20px 8px}
+   .itw_secondary_nav li.dropdown a strong{display: none;}
+   .dropdown-menu>li.itw_user_name{display:block;}
+   .itw_secondary_nav>li>a.dropdown-toggle{padding: 12px 10px}
+   .itw_secondary_nav>li>a{padding: 20px 10px}
+   .navbar-default .navbar-nav>li:first-child>a{padding-left: 0;}
+   .container{padding: 0;}
+   .itw_search_jobs{padding: 0;}
+   .itw_location_selection{padding: 0 5px 0 4px;}
+   .itw_trending_skills_blogs{padding: 0;}
+   .itw_hero_banner_left_side{padding-right: 0; width: 70%}
+   .itw_hot_blogs{width: 30%;}
+   .itw_user_used_skill_info p{padding-left: 5px;}
+   .itw_trending_skills{padding-left: 0;}
+   .itw_user_used_skill{padding: 3px 0;}
+   .itw_trending_skills img{width: 60px;}
+   .itw_hot_blog_listing li{padding: 10px}
+   .itw_hot_blog_listing li h3{font-size: 12px;}
+   .itw_hot_blog_listing li a{font-size: 14px; line-height: 100%;}
+   .itw_blog_subscribe{padding: 10px}
+   .itw_technology_curb{padding-top:95px;}
+   .itw_technology_curb p{font-size: 22px;}
+   .itw_take_survey{padding: 50px 15px;}
+   .itw_take_survey h2 span{background-position: 0 0; padding-left: 45px;}
+   .itw_footer_logo{padding: 0;}
+   .itw_company_profile li{padding: 0 5px; -webkit-flex-direction: row-reverse; flex-direction: row-reverse;}
+   .itw_company_profile_item{padding: 10px 0;}
+   .itw_company_profile h2, .itw_take_survey h2{font-size: 30px}
+   .itw_user_used_skill_info p span{font-size: 16px;}
+   .itw_user_used_skill_info p strong{font-size: 20px;}
+   .itw_user_used_skill_info p{font-size: 14px;}
+   .itw_technology_curb span.aquote{background-position: 0 0}
+}
+@media (min-width: 945px) and (max-width: 1280px) {
+   .container{width: 100%;}
+    .itw-salary-report-page .container{max-width: 1170px}
+   .itw_trending_skills{padding-left: 0;}
+   .itw_user_used_skill{padding: 3px 0}
+   .itw_technology_curb{padding-top:170px;}
+   .itw_technology_curb p{font-size: 22px;}
+   .itw_user_used_skill_info p span{font-size: 16px;}
+   .itw_user_used_skill_info p strong{font-size: 22px;}
+   .itw_user_used_skill_info p{font-size: 14px;}
+   .itw_technology_curb span.aquote{background-position: 0 0}
+}
+@media (min-width: 1281px){
+  .itw_trending_skills ul li{margin-bottom: 5px;}
+}
+@media (min-width: 1680px){
+    .itw_technology_curb{padding-top: 160px}
+}

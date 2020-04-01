@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lab4</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/lab2.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+	<div>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" id="menuleft" href="#">Human Computer
+						Interaction</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right" id="menuu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Labs <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="lab1.html">Lab1</a></li>
+							<li><a href="lab2.html">Lab2</a></li>
+							<li><a href="lab3.html">Lab3</a></li>
+							<li><a href="lab4.html">Lab4</a></li>
+							<li><a href="lab5.html">Lab5</a></li>
+						</ul></li>
+
+
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<ul class="breadcrumb" style="margin-top: -18px;">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="#">Labs</a></li>
+		<li><a href="lab4.html">Lab4</a></li>
+	</ul>
+	<div style="margin-top: -10px; margin-left: 40%; font-size: 20px;">
+		<a href="lab1.html">Lab1 &raquo;</a> <a href="lab2.html">Lab2
+			&raquo;</a> <a href="lab3.html">Lab3 &raquo;</a> <a href="lab4.html">Lab4
+			&raquo;</a><a href="lab5.html">Lab5
+			&raquo;</a>
+	</div>
+	<!-- Thẻ tag -->
+	<div class="tab">
+		<button class="tablinks" onclick="openCity(event, 'yeucau')"
+			id="defaultOpen">Requirement</button>
+		<button class="tablinks" onclick="openCity(event, 'thietke')">Design</button>
+		<button class="tablinks" onclick="openCity(event, 'hienthuc')">Implementation</button>
+	</div>
+	<div id="yeucau" class="tabcontent" style="display: block">
+		<ul>
+			<table>
+				<tbody>
+					<tr>
+						<td style="font-size: 17px;">1) Tạo một trang Web có nội dung
+							bất kỳ, sử dụng linh hoạt tất cả những phần sau: Input Controls,
+							Navigation, Animations, Default Settings, Guided Actions.</td>
+					</tr>
+					<tr>
+						<td style="font-size: 17px;">2) Có biểu mẫu liên hệ.</td>
+					</tr>
+				</tbody>
+			</table>
+		</ul>
+	</div>
+	<div id="thietke" class="tabcontent">
+		<h4 class="title-design">Design on Paper</h4>
+		<img src="lab4/img/lab4_1.jpg" class="img-rounded" alt="Cinque Terre"
+			style="width: 960px; height: 720px; margin-left: 15%;">
+		<div style="margin-left: 600px;">
+			<br> <a href="lab4/img/lab4_1.jpg" target="_blank"
+				class="btn btn-success btn-lg"> <span
+				class="glyphicon glyphicon-download"></span> Download
+			</a>
+		</div>
+		<br>
+		<div
+			style="padding: 1px; background: black; width: 930px; margin-left: 200px;">
+
+		</div>
+		<h4 class="title-design">Design on Photoshop</h4>
+		<img src="lab4/img/lab4.jpg" class="img-rounded" alt="Cinque Terre"
+			style="width: 1020px; height: 1310px; margin-left: 13%;">
+
+
+		<div style="margin-left: 600px;">
+			<br> <a href="lab4/img/lab4.psd" target="_blank"
+				class="btn btn-success btn-lg"> <span
+				class="glyphicon glyphicon-download"></span> Download
+			</a>
+		</div>
+	</div>
+	<div id="hienthuc" class="tabcontent" style="width: 100%">
+		<div>
+			<h4 class="title-design">HTML</h4>
+			<iframe src="Imlab4.html" width="100%" height="800px"></iframe>
+		</div>
+
+	</div>
+	<!-- Go To Top Link -->
+	<script>
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>

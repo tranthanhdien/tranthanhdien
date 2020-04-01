@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Style Guide</title>
+<link href="css/prism.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/documentation.css">
+<link rel="stylesheet" href="css/layout.css"
+	media="all and (min-width: 40em)">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="xx">
+
+	<div class="xx-js-container">
+
+		<div class="xx-container">
+
+			<div class="heading">
+				<h1>Website Style Guide</h1>
+			</div>
+
+			
+
+			
+			<h2 class="xx-section-title">Layout</h2>
+
+			<p>
+				Các tên lớp được sử dụng để bố trí đều có tiền tố
+				<code>layout-</code>
+				. Chúng đều bắt nguồn từ các giá trị ghi chú âm nhạc. Quy ước đặt
+				tên này đã được sử dụng vì nó tránh tham chiếu số lượng cột trong
+				lưới (thường chỉ có ý nghĩa ở chế độ xem "máy tính để bàn").
+			</p>
+
+			<p>Trang web sử dụng lưới 9 cột có thể được chia thành bố cục 2,
+				3 hoặc 9 cột và có một số thay đổi nhỏ trên các bố cục này.</p>
+
+			<p>
+				Container rộng nhất là
+				<code>layout-breve</code>
+				.
+			</p>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-breve">
+					<p>layout-breve</p>
+				</div>
+			</div>
+
+			<p>Bố cục có thể được bọc bên trong nhau. Ví dụ: 2 minims layout
+				có thể nằm trong một semibreve để có bố cục 2 cột sẽ ngừng phát
+				triển khi nó đạt đến một kích thước nhất định.</p>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-breve">
+					<p>layout-breve</p>
+					<div class="layout-minim">
+						<p>layout-minim</p>
+					</div>
+					<div class="layout-minim">
+						<p>layout-minim</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-breve">
+					<p>layout-breve</p>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+				</div>
+			</div>
+
+
+			<p>
+				<code>layout-semibreve</code>
+				container có chiều rộng tối đa được áp dụng sớm hơn
+				</code>
+				. This will appear to be the same width as layout-breve unless
+				you're viewing the site on a wide screen.
+			</p>
+
+			
+
+			<div class="xx-pattern-layout">
+				<div class="layout-semibreve">
+					<p>layout-semibreve</p>
+					<div class="layout-minim">
+						<p>layout-minim</p>
+					</div>
+					<div class="layout-minim">
+						<p>layout-minim</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-semibreve">
+					<p>layout-semibreve</p>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+					<div class="layout-crotchet">
+						<p>layout-crotchet</p>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<p>
+				Đối với chiều rộng cột không bằng nhau, sử dụng
+				<code>layout-minor</code>
+				và
+				<code>layout-major</code>
+				.
+			</p>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-semibreve">
+					<p>layout-semibreve</p>
+					<div class="layout-minor">
+						<p>layout-minor</p>
+					</div>
+					<div class="layout-major">
+						<p>layout-major</p>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				Một "stacatto" là <a href="http://en.wikipedia.org/wiki/Staccato">
+					một ghi chú về thời gian rút ngắn, tách biệt với ghi chú có thể
+					theo sau bởi sự im lặng</a>. Điều này đã được áp dụng cho lớp khi cột
+				ngắn hơn bình thường.
+
+			</p>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-breve">
+					<p>layout-breve</p>
+					<div class="layout-minim-staccato">
+						<p>layout-minim-staccato</p>
+					</div>
+					<div class="layout-minim-staccato">
+						<p>layout-minim-staccato</p>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="xx-pattern-layout">
+				<div class="layout-breve">
+					<p>layout-breve</p>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="xx-pattern-layout">
+				<div class="layout-semibreve">
+					<p>layout-semibreve</p>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+					<div class="layout-crotchet-staccato">
+						<p>layout-crotchet-staccato</p>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- ICONS -->
+			
+			<h3>Typography</h3>
+			<p>Các loại font chữ được sử dụng trong Project: Times New Roman, Times, serief, </p>
+			<h3>Primary Colors</h3>
+
+			<ul class="list-no-bullets">
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #34b67a;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(204,39,62)</li>
+						<li>#34b67a1</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #ffffff;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(63,158,216)</li>
+						<li>#ffffff</li>
+
+					</ul>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #000000;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(109, 110, 113)</li>
+						<li>#000000</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #a0d5ec;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(0, 0, 0)</li>
+						<li>#a0d5ec</li>
+
+					</ul></li>
+			</ul>
+
+			<h3>Secondary Colors</h3>
+
+			<ul class="list-no-bullets">
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #f0ad4e;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(0, 75, 106)</li>
+						<li>#f0ad4e</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #d9534f;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(122,181,214)</li>
+						<li>#d9534f</li>
+
+					</ul>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #1abc9c;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(68, 68, 68)</li>
+						<li>#1abc9c</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #35a670;"></span>
+					<ul class="list-no-bullets swatch-details">
+						<li><strong>Medium gray</strong></li>
+						<li>rgb(153, 149, 149)</li>
+						<li>#35a670</li>
+						<li>$color-medium-gray</li>
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #f3f3f3;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(229, 229, 229)</li>
+						<li>#f3f3f3</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #e87d2b;"></span>
+					<ul class="list-no-bullets swatch-details">
+						<li><strong>Orange</strong></li>
+						<li>rgb(232, 125, 43)</li>
+						<li>#e87d2b</li>
+						<li>$color-orange</li>
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #0000ff;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(105, 87, 156)</li>
+						<li>#0000ff</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #0099d5;"></span>
+					<ul class="list-no-bullets swatch-details">
+						<li><strong>Teal</strong></li>
+						<li>rgb(0, 161, 117)</li>
+						<li>#0099d5</li>
+						<li>$color-teal</li>
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #ff7878;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(66, 152, 187)</li>
+						<li>#ff7878</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #dda8ab;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(254, 221, 68)</li>
+						<li>#dda8ab</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #dddddd;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(255, 255, 255)</li>
+						<li>#dddddd</li>
+
+					</ul></li>
+				<li class="swatch"><span class="swatch-preview"
+					style="background-color: #eebc49;"></span>
+					<ul class="list-no-bullets swatch-details">
+
+						<li>rgb(255, 255, 255)</li>
+						<li>#eebc49</li>
+
+					</ul></li>
+			</ul>
+
+			<!-- Elenments -->
+
+			<section class="xx-section" id="elements">
+
+
+
+
+
+
+				<!-- Images -->
+				<h3>IMAGES</h3>
+				<h4 style="color: black;">Kích thước Icons:</h4>
+				<p>3x16, 15x17, 14x17, 17x17, 13x17, 12x17, 34x34, 14x18, 16x16,
+					30x30, 40x40, 34x30, 42x36, 16x19, 12x14, 26x26, 16x18, 11x18,
+					15x18, 9x17, 46x38...</p>
+				<h2 class="xx-section-title">Icons</h2>
+
+			<p style="color: red;">Icons được sử dụng:</p>
+
+			<ul class="list-no-bullets list-crotchet">
+				<li class="icon-facebook">icon-facebook</li>
+				<li class="icon-mail">icon-mail</li>
+				<li class="icon-google-plus">icon-google-plus</li>
+				<li class="icon-google-plus2">icon-google-plus2</li>
+			
+				
+
+				<li class="icon-share">icon-share</li>
+				<li class="icon-user">icon-user</li>
+				<li class="icon-phone">icon-phone</li>
+				<li class="icon-location">icon-location</li>
+				<li class="icon-envelop">icon-envelop</li>
+				<li class="icon-alarm">icon-alarm</li>
+				<li class="icon-print">icon-print</li>
+				<li class="icon-database">icon-database</li>
+				<li class="icon-undo">icon-undo</li>
+				<li class="icon-redo">icon-redo</li>
+				<li class="icon-bubble">icon-bubble</li>
+				<li class="icon-users">icon-users</li>
+				<li class="icon-quotes-left">icon-quotes-left</li>
+				<li class="icon-quotes-right">icon-quotes-right</li>
+				<li class="icon-key">icon-key</li>
+				<li class="icon-wrench">icon-wrench</li>
+				<li class="icon-cogs">icon-cogs</li>
+				<li class="icon-download2">icon-download2</li>
+				<li class="icon-upload2">icon-upload2</li>
+				<li class="icon-earth">icon-earth</li>
+				<li class="icon-star">icon-star</li>
+				<li class="icon-star2">icon-star2</li>
+				<li class="icon-star3">icon-star3</li>
+				<li class="icon-arrow-up">icon-arrow-up</li>
+				<li class="icon-arrow-right2">icon-arrow-right2</li>
+				<li class="icon-arrow-down">icon-arrow-down</li>
+				<li class="icon-arrow-left">icon-arrow-left</li>
+				<li class="icon-arrow-up2">icon-arrow-up2</li>
+				<li class="icon-code">icon-code</li>
+				<li class="icon-search">icon-search</li>
+				<li class="icon-tools">icon-tools</li>
+				<li class="icon-lamp">icon-lamp</li>
+				<li class="icon-calendar">icon-calendar</li>
+				<li class="icon-twitter2">icon-twitter2</li>
+				<li class="icon-grid">icon-grid</li>
+				<li class="icon-tumblr">icon-tumblr</li>
+				<li class="icon-cc2">icon-cc2</li>
+				<li class="icon-upload3">icon-upload3</li>
+			</ul>
+				<h3 style="color: black;">Kích thước hình ảnh:</h3>
+				<p>Banner: 596x238, 80x80, ...</p>
+				
+				<br>
+				<div class="col-lg-6">
+					<div class="panel panel-default" id="images">
+						<div class="panel-heading">Images</div>
+						<div class="panel-body">
+							<p>
+								<img src="http://placehold.it/120x100" class="img-rounded">
+								<img src="http://placehold.it/120x100" class="img-circle">
+								<img src="http://placehold.it/120x100" class="img-thumbnail">
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- File, Directory -->
+				<h2>File, Directory</h2>
+				<img alt="" src="images/directory.JPG">
+		</div>
+
+		</main>
+		<!--@main-->
+
+
+	</div>
+	<!-- .xx-container -->
+	<!-- .js-container -->
+
+</body>
+
+<script src="js/prism.js"></script>
+
+<script>
+	// Adds class of js to the html tag if JS is enabled
+	document.getElementsByTagName('html')[0].className += ' js';
+
+	// Adds class of svg to the html tag if svg is enabled
+	(function flagSVG() {
+		var ns = {
+			'svg' : 'http://www.w3.org/2000/svg'
+		};
+		if (document.implementation.hasFeature(
+				"http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {
+			document.getElementsByTagName('html')[0].className += ' svg';
+		}
+	})();
+
+	(function(document, undefined) {
+		// Pattern selector
+		document.getElementById('pattern-submit').style.display = 'none';
+		document.getElementById('pattern-select').onchange = function() {
+			//document.location=this.options[this.selectedIndex].value;
+			var val = this.value;
+			if (val !== "") {
+				window.location = val;
+			}
+		}
+	})(document);
+
+	(function(win, doc) {
+		'use strict';
+		if (!doc.querySelector || !win.addEventListener) {
+			// doesn't cut the mustard.
+			return;
+		}
+		/*
+		If the viewport is small enough, use the off-canvas pattern for navigation.
+		 */
+		if (!doc.querySelector('.xx-js-container')
+				|| !doc.querySelector('.xx-nav')
+				|| !doc.querySelector('.xx-skip-to-nav')) {
+			return;
+		}
+		var toggleclass = 'slid', reg = new RegExp('(\\s|^)' + toggleclass
+				+ '(\\s|$)'), page = doc.querySelector('.xx-js-container'), primary = doc
+				.querySelector('.xx-nav'), skiplink = doc
+				.querySelector('.xx-skip-to-nav'), newnav = doc
+				.createElement('div'), togglePage = function(e) {
+			e.preventDefault();
+			if (!page.className.match(reg)) {
+				page.className += ' ' + toggleclass;
+			} else {
+				page.className = page.className.replace(reg, '');
+			}
+		};
+		skiplink.addEventListener('click', togglePage, false);
+		newnav.appendChild(primary);
+		newnav.className = 'xx-js-offcanvas';
+		skiplink.className = skiplink.className + ' persist';
+		doc.body.appendChild(newnav);
+	}(this, this.document));
+
+	// Modified from http://stackoverflow.com/questions/3795481/javascript-slidedown-without-jquery
+	var minheight = 50;
+	var maxheight = document.getElementById('fade').offsetHeight + 15;
+	var time = 1000;
+	var timer = null;
+	var toggled = false;
+
+	window.onload = function() {
+
+		var controler = document.getElementById('fade-activate');
+		var slider = document.getElementById('fade-content');
+		slider.style.height = minheight + 'px';
+		controler.onclick = function(e) {
+			e.preventDefault();
+			clearInterval(timer);
+			var instanceheight = parseInt(slider.style.height); // Current height
+			var init = (new Date()).getTime(); //start time
+			var height = (toggled = !toggled) ? maxheight : minheight; //if toggled
+
+			var disp = height - parseInt(slider.style.height);
+			timer = setInterval(function() {
+				var instance = (new Date()).getTime() - init; //animating time
+				if (instance <= time) { //0 -> time seconds
+					var pos = instanceheight
+							+ Math.floor(disp * instance / time);
+					slider.style.height = pos + 'px';
+				} else {
+					slider.style.height = height + 'px'; //safety side ^^
+					clearInterval(timer);
+				}
+			}, 1);
+		};
+	};
+</script>
+</html>

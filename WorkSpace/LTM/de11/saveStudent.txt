@@ -1,0 +1,4 @@
+16130326	Trần Thanh Điền	Lập trình mạng	9.5	Lập trình nâng cao	8.5	
+16130312	Đặng Văn Đa	Lập trình nâng cao	8.5	Lập trình web	10.0	Lập trình cơ bản	7.5	
+16130315	Nguyễn Thị Hồng Duyên	Lập trình mạng	9.5	Lập trình cơ bản	7.5	
+16130317	Võ Xuân Oai	Lập trình web	10.0	Lập trình cơ bản	7.5	Lập trình mạng	9.5	Lập trình cơ bản	7.5	

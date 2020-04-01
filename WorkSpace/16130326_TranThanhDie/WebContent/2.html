@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lab2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+
+.topnav {
+	overflow: hidden;
+	background-color: #34b67a;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #1c8d56;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #1c8d56;
+	color: white;
+}
+
+#title {
+	text-align: center;
+	color: #34b67a;
+	margin-top: 20px;
+}
+
+#trip {
+	text-align: center;
+	background-color: #dadada;
+	padding: 12px;
+	color: #34b67a;
+	margin-top: -23px;
+}
+
+#tripp {
+	text-align: center;
+	background-color: #dadada;
+	padding: 12px;
+	color: #232323;
+}
+
+.infor {
+	background-color: #f1f1f1;
+	margin-top: -16px;
+}
+
+#center {
+	width: 900px;
+	margin-left: 260px;
+	margin-top: 40px;
+}
+
+#home {
+	width: 46px;
+	height: 44px;
+	background: url(img_navsprites.gif) 0 0;
+}
+
+#background {
+	background-color: #f1f1f1;
+	margin-top: -5px;
+}
+</style>
+</head>
+<body id="center" style="margin-left: 250px;">
+	<h3 id="title">
+		SỞ GIAO THÔNG VẬN TẢI THÀNH PHỐ HỒ CHÍ MINH<br> TRUNG TÂM QUẢN LÝ
+		GIAO THÔNG CÔNG CỘNG THÀNH PHỐ HỒ CHÍ MINH
+	</h3>
+	<div class="topnav">
+		<a class="#" href="#home">Trang chủ</a> <a href="#news">Giới thiệu</a>
+		<a class="active" href="#contact">Tuyến xe</a> <a href="#about">Tra
+			cứu thông tin</a> <a href="#about">Quản lí nhân viên</a>
+	</div>
+	<img id="home" src="img/home.png">
+	<br>
+	<br>
+	<h4 id="trip">Danh sách các tuyến xe</h4>
+
+	<div id="background">
+		<form class="form-inline" style="margin-left: 300px;">
+			<div class="form-group mx-sm-3 mb-2">
+				<input type="text" class="form-control" id="inputPassword2"
+					placeholder="<Nhập mã hoặc tên tuyến>" autofocus>
+			</div>
+			<button type="submit" class="btn btn-success mb-2">Tìm kiếm</button>
+
+		</form>
+
+
+		<div class="container" style="width: 930px; margin-left: -15px;">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/01.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/02.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/03.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/04.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/05.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/06.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/07.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/08.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/09.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/19.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/29.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/33.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/104.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/93.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/89.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/53.jpg"
+							alt="Lights" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/150.jpg"
+							alt="Nature" style="width: 100%">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="#" target="_blank"> <img src="img/19.jpg"
+							alt="Fjords" style="width: 100%">
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h4 id="tripp">
+		Bản quyền © Trung tâm Quản lý giao thông công cộng Thành phố Hồ Chí
+		Minh<br> Thực hiện: Trần Thanh Điền-DH16DTB-CNTT-NLU
+	</h4>
+
+
+</body>
+</html>

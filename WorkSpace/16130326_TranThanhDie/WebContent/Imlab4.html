@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="author" content="Jobboard">
+<title>Lab4</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="lab4/img/favicon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="lab4/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="lab4/css/jasny-bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="lab4/css/bootstrap-select.min.css"
+	type="text/css">
+<!-- Material CSS -->
+<link rel="stylesheet" href="lab4/css/material-kit.css" type="text/css">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="lab4/fonts/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="lab4/fonts/themify-icons.css">
+
+<!-- Animate CSS -->
+<link rel="stylesheet" href="lab4/extras/animate.css" type="text/css">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="lab4/extras/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="lab4/extras/owl.theme.css" type="text/css">
+<!-- Rev Slider CSS -->
+<link rel="stylesheet" href="lab4/extras/settings.css" type="text/css">
+<!-- Slicknav js -->
+<link rel="stylesheet" href="lab4/css/slicknav.css" type="text/css">
+<!-- Main Styles -->
+<link rel="stylesheet" href="lab4/css/main.css" type="text/css">
+<!-- Responsive CSS Styles -->
+<link rel="stylesheet" href="lab4/css/responsive.css" type="text/css">
+
+<!-- Color CSS Styles  -->
+<link rel="stylesheet" type="text/css" href="lab4/css/colors/red.css"
+	media="screen" />
+<!-- Style Jobs -->
+<link href="lab4/css/it/base.css" type='text/css' rel='stylesheet' />
+<link href="lab4/css/it/it.css" type='text/css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+	<!-- Header Section Start -->
+	<div class="header">
+		<!-- Start intro section -->
+		<section id="intro" class="section-intro">
+			<div class="logo-menu">
+				<nav class="navbar navbar-default" role="navigation"
+					data-spy="affix" data-offset-top="50">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle"
+								data-toggle="collapse" data-target="#navbar">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand logo" href="index.html"><img
+								src="lab4/img/logo.png" alt=""></a>
+						</div>
+
+						<div class="collapse navbar-collapse" id="navbar">
+							<!-- Start Navigation List -->
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="#"> Trang chủ </a>
+								<li><a href="#"> Công ty IT </a>
+								<li><a href="#"> Công việc <i class="fa fa-angle-down"></i>
+								</a>
+									<ul class="dropdown">
+										<li><a href="#"> Tìm theo từ khoá </a></li>
+										<li><a href="#"> Tìm theo kĩ năng </a></li>
+										<li><a href="#"> Tìm theo mức lương</a></li>
+									</ul></li>
+								<li><a href="#"> Blogs </a>
+								<li><a href="#"> Diễn đàn IT </a>
+								<li><a href="#"> Việc làm gợi ý </a> <img
+									src="lab4/img/features/hot.gif"
+									style="position: absolute; width: 30px; top: 2px; right: -17px;">
+							</ul>
+							<ul class="nav navbar-nav navbar-right float-right">
+								<li class="left"><a href="#"><i class="ti-pencil-alt"></i>
+										Đăng bài</a></li>
+								<li class="right"><a href="#"><i class="ti-lock"></i>
+										Login</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Mobile Menu Start -->
+					<ul class="wpb-mobile-menu">
+						<li><a class="active" href="#"> Trang chủ </a>
+						<li><a href="#"> Công ty IT </a>
+						<li><a href="#"> Công việc <i class="fa fa-angle-down"></i>
+						</a>
+							<ul class="dropdown">
+								<li><a href="#"> Tìm theo từ khoá </a></li>
+								<li><a href="#"> Tìm theo kĩ năng </a></li>
+								<li><a href="#"> Tìm theo mức lương</a></li>
+							</ul></li>
+						<li><a href="#"> Blogs </a>
+						<li><a href="#"> Diễn đàn IT </a>
+						<li><a href="#"> Việc làm gợi ý </a> <img
+							src="lab4/img/features/hot.gif"
+							style="position: absolute; width: 30px; top: 2px; right: -17px;">
+						<li class="btn-m"><a href="post-job.html"><i
+								class="ti-pencil-alt"></i> Post A Job</a></li>
+						<li class="btn-m"><a href="my-account.html"><i
+								class="ti-lock"></i> Log In</a></li>
+					</ul>
+					<!-- Mobile Menu End -->
+				</nav>
+			</div>
+			<!-- Header Section End -->
+			<div class="search-container">
+				<div class="container">
+					<div class="row">
+						<div
+							style="font-size: 35px; color: white; margin-top: -15%; margin-left: 30%">
+
+							<marquee behavior="alternate" width="10%"> >> </marquee>
+							Công việc tốt cho bạn
+							<marquee behavior="alternate" width="10%"><< </marquee>
+
+						</div>
+						<div class="col-md-12">
+							<h1>Tìm kiếm công việc phù hợp với bạn!</h1>
+							<br>
+							<h2>
+								Hơn <strong>12,000</strong> việc làm IT dành riêng cho bạn!
+							</h2>
+							<div class="content">
+								<form method="" action="">
+									<div class="row">
+										<div class="col-md-4 col-sm-6">
+											<div class="form-group">
+												<input class="form-control" type="text"
+													placeholder="Chức danh / từ khoá / tên công ty"><i
+													class="ti-time"></i>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6">
+											<div class="form-group">
+												<input class="form-control" type="email"
+													placeholder="Tỉnh / thành phố / mã"><i
+													class="ti-location-pin"></i>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="search-category-container">
+												<label class="styled-select"> <select
+													class="dropdown-product selectpicker">
+														<option>Tất cả công việc</option>
+														<option>Freelancer</option>
+														<option>IT & Engineering</option>
+														<option>Art/Design</option>
+														<option>C, C++, C#, Java,...</option>
+												</select>
+												</label>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-6">
+											<button type="button" class="btn btn-search-icon">
+												<i class="ti-search"></i>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="popular-jobs">
+								<b>Từ khoá phổ biến: </b> <a href="#">Web Design</a> <a href="#">Manager</a>
+								<a href="#">Programming</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end intro section -->
+	</div>
+
+	<!-- Find Job Section End -->
+	<!-- TOP JOBS -->
+	<section id="topJob" class="top-job mt3 mb2">
+		<div class="container">
+			<h2 class="section-title">Việc Làm Bạn Sẽ Thích</h2>
+
+			<div class="job-list-wrapper" style="margin-top: -8%">
+				<div class="row mb2">
+
+					<div class="col-xs-12 col-sm-6">
+						<a href="#">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/11.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">Lập Trình Viên C++ Lương Hấp Dẫn</h5>
+										<p class="text-org mb0">$500 - $1500</p>
+										<p class="text-grey mb0">Ha Noi</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/22.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">[Urgent] Senior Java Developer 3+
+											Years</h5>
+
+										<p class="text-org mb0">Thương Lượng</p>
+										<p class="text-grey mb0">Ho Chi Minh</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" target="_blank">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/33.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">【～$1500】Frontend Developer ( Vue.js
+											/ AngularJS )</h5>
+
+										<p class="text-org mb0">$700 - $1500</p>
+										<p class="text-grey mb0">Ho Chi Minh</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" target="_blank">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/44.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">Kỹ Sư Cầu Nối (Làm Việc Tại Hà Nội
+											hoặc Nhật Bản)</h5>
+
+										<p class="text-org mb0">$1000 - $5000</p>
+										<p class="text-grey mb0">Ha Noi, International</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" target="_blank">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/55.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">Business Analyst, Supply Chain
+											Finance Application</h5>
+										<p class="text-org mb0">Thương Lượng</p>
+										<p class="text-grey mb0">Ha Noi</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" target="_blank">
+							<div class="job-item-wrapper mb1 p-half">
+								<div class="row">
+									<div class="col-xs-3 pr0">
+										<div class="el-wrapper85">
+											<div class="el-inner">
+												<img src="lab4/img/jobs/66.png" class="el-img-fit-contain">
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-9">
+										<h5 class="ellipsis">Chuyên Viên Triển Khai Phần Mềm - Số
+											Lượng 02</h5>
+										<p class="text-org mb0">$400 - $700</p>
+										<p class="text-grey mb0">Ho Chi Minh</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end TOP JOBS -->
+	<!-- Featured Jobs Section Start -->
+	<section class="featured-jobs section" style="margin-top: -8%">
+		<div class="container">
+			<h2 class="section-title">Công việc gần đây</h2>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="featured-item">
+						<div class="featured-wrap">
+							<div class="featured-inner">
+								<figure class="item-thumb">
+									<a class="hover-effect" href="#"> <img
+										src="lab4/img/features/1.jpg" alt=""></a>
+								</figure>
+								<div class="item-body">
+									<h3 class="job-title">
+										<a href="#">Graphic Designer</a>
+									</h3>
+									<div class="adderess">
+										<i class="ti-location-pin"></i> Dallas, United States
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-foot">
+							<span><i class="ti-calendar"></i> 4 months ago</span> <span><i
+								class="ti-time"></i> Full Time</span>
+							<div class="view-iocn">
+								<a href="#"><i class="ti-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="featured-item">
+						<div class="featured-wrap">
+							<div class="featured-inner">
+								<figure class="item-thumb">
+									<a class="hover-effect" href="#"> <img
+										src="lab4/img/features/2.jpg" alt=""></a>
+								</figure>
+								<div class="item-body">
+									<h3 class="job-title">
+										<a href="#">Software Engineer</a>
+									</h3>
+									<div class="adderess">
+										<i class="ti-location-pin"></i> Delaware, United States
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-foot">
+							<span><i class="ti-calendar"></i> 5 months ago</span> <span><i
+								class="ti-time"></i> Part Time</span>
+							<div class="view-iocn">
+								<a href="#"><i class="ti-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="featured-item">
+						<div class="featured-wrap">
+							<div class="featured-inner">
+								<figure class="item-thumb">
+									<a class="hover-effect" href="#"> <img
+										src="lab4/img/features/img-3.jpg" alt=""></a>
+								</figure>
+								<div class="item-body">
+									<h3 class="job-title">
+										<a href="#">Managing Director</a>
+									</h3>
+									<div class="adderess">
+										<i class="ti-location-pin"></i> NY, United States
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-foot">
+							<span><i class="ti-calendar"></i> 3 months ago</span> <span><i
+								class="ti-time"></i> Full Time</span>
+							<div class="view-iocn">
+								<a href="#"><i class="ti-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Featured Jobs Section End -->
+
+	<!-- Clients Section -->
+	<section class="clients section">
+		<div class="container" style="margin-top: -8%">
+			<h2 class="section-title">Đối tác & Khách hàng</h2>
+			<div class="row">
+				<marquee id="marq" direction="up" scrollamount="5" loop="50"
+					scrolldelay="0" onmouseover="this.stop()" onmouseout="this.start()">
+					<div id="clients-scroller">
+
+						<div class="items">
+							<img src="lab4/img/clients/client1.jpg" alt="">
+						</div>
+						<div class="items">
+							<img src="lab4/img/clients/client2.png" alt="">
+						</div>
+						<div class="items">
+							<img src="lab4/img/clients/client3.png" alt="">
+						</div>
+						<div class="items">
+							<img src="lab4/img/clients/client4.jpg" alt="">
+						</div>
+						<div class="items">
+							<img src="lab4/img/clients/client5.png" alt="">
+						</div>
+						<div class="items">
+							<img src="lab4/img/clients/client6.png" alt="">
+						</div>
+					</div>
+				</marquee>
+			</div>
+		</div>
+	</section>
+	<!-- Client Section End -->
+	<!-- Footer Section Start -->
+	<footer>
+		<!-- SOCIALS -->
+		<section id="socialContent" class="social-content">
+			<div class="social-wrapper text-center">
+
+				<div class="social-btn">
+					<a href="https://www.facebook.com/t.thanhdien"
+						class="social-facebbook hover-float" target="_blank"><i
+						class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"
+						class="social-youtube hover-float" target="_blank"><i
+						class="fa fa-youtube" aria-hidden="true"></i></a> <a href="#"
+						class="social-linkedin hover-float" target="_blank"><i
+						class="fa fa-linkedin" aria-hidden="true"></i></a>
+				</div>
+
+			</div>
+		</section>
+		<!-- end SOCIALS -->
+		<!-- Footer area End -->
+
+		<!-- Copyright Start  -->
+		<div id="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="site-info text-center">
+							Copyright <i class="fa fa-love"></i><a
+								href="https://bootstrapthemes.co">@@</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright End -->
+
+	</footer>
+	<!-- Footer Section End -->
+
+	<!-- Go To Top Link -->
+	<a href="#" class="back-to-top"> <i class="ti-arrow-up"></i>
+	</a>
+
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_four"></div>
+				<div class="object" id="object_five"></div>
+				<div class="object" id="object_six"></div>
+				<div class="object" id="object_seven"></div>
+				<div class="object" id="object_eight"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main JS  -->
+	<script type="text/javascript" src="lab4/js/jquery-min.js"></script>
+	<script type="text/javascript" src="lab4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lab4/js/material.min.js"></script>
+	<script type="text/javascript" src="lab4/js/material-kit.js"></script>
+	<script type="text/javascript" src="lab4/js/jquery.parallax.js"></script>
+	<script type="text/javascript" src="lab4/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="lab4/js/jquery.slicknav.js"></script>
+	<script type="text/javascript" src="lab4/js/main.js"></script>
+	<script type="text/javascript" src="lab4/js/jquery.counterup.min.js"></script>
+	<script type="text/javascript" src="lab4/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="lab4/js/jasny-bootstrap.min.js"></script>
+	<script type="text/javascript" src="lab4/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="lab4/js/form-validator.min.js"></script>
+	<script type="text/javascript" src="lab4/js/contact-form-script.js"></script>
+	<script type="text/javascript"
+		src="lab4/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="lab4/js/jquery.themepunch.tools.min.js"></script>
+
+</body>
+</html>

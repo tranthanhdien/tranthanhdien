@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;GroupWeb&apos;&#x0D;&#x0A;- Original project: &apos;menu5&apos;&#x0D;&#x0A;- Destination element: &apos;GroupWeb&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     index.html&#x0D;&#x0A;     styles.css&#x0D;&#x0A;     tabright.gif&#x0D;&#x0A;     tableft.gif" description="Copy files" element1="menu5/index.html" element2="menu5/styles.css" element3="menu5/tabright.gif" element4="menu5/tableft.gif" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1539160369930" target="/GroupWeb" units="0" version="1.0"/>
+</session>

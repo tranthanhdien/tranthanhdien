@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.laptrinhjavaweb.controller.admin&apos; to &apos;com.laptrinhjavaweb.controller&apos;&#x0D;&#x0A;- Original project: &apos;spring-mvc&apos;&#x0D;&#x0A;- Original element: &apos;spring-mvc/src/main/java/com.laptrinhjavaweb.controller.admin&apos;&#x0D;&#x0A;- Renamed element: &apos;spring-mvc/src/main/java/com.laptrinhjavaweb.controller&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.laptrinhjavaweb.controller.admin&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.laptrinhjavaweb.controller.admin" name="com.laptrinhjavaweb.controller" qualified="false" references="true" stamp="1581846128977" textual="false" version="1.0"/>
+</session>

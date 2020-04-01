@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/DAO/DatabaseConnection.java=UTF-8
+encoding//src/controller/ServletSua.java=UTF-8
+encoding//src/controller/ServletXoaEmp.java=UTF-8
+encoding//src/model/EmployeeDAO.java=UTF-8

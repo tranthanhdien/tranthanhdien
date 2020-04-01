@@ -1,0 +1,10 @@
+package Test;
+
+import topica.edu.vn.ui.DangNhapUI;
+
+public class TestDangNhap {
+	public static void main(String[] args) {
+		DangNhapUI ui=new DangNhapUI("Hệ thống quản lý Công Văn");
+		ui.showWindow();
+	}
+}

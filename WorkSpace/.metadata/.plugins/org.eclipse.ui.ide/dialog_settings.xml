@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\WorkSpace\MyWeb_2020"/>
+		<item value="E:\WorkSpace\MayBank"/>
+		<item value="E:\Source-Spring-mvc\spring-mvc-template-bootstrap-spring-mvc"/>
+		<item value="E:\Source-Spring-mvc\jsp-servlet-jdbc-master"/>
+		<item value="E:\Source-Spring-mvc\spring-mvc-jpa-spring-mvc"/>
+		<item value="E:\WorkSpace\spring-mvc-template-bootstrap-spring-mvc"/>
+		<item value="E:\WorkSpace\spring-mvc-interceptor-spring"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\spring-mvc-interceptor-spring"/>
+		<item value="E:\WorkSpace\LTW"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\CNPM1"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\Group02_CNPM-master\Group02_CNPM-master"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\AccessFacebook\AccessFacebook"/>
+		<item value="E:\WorkSpace\FinalWeb"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\template admin"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\project_java\project_java"/>
+		<item value="E:\WorkSpace\16130326_TranThanhDien"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\WebProject_Backup\WebProject_Backup"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\Project_HCI_Backup\Project_HCI_Backup"/>
+		<item value="F:\WebProject\WebProject"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\bonfire"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\bonfire\bonfire"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\WebProject"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\WebProject\WebProject"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\ProjectWeb\ProjectWeb"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\DemoDaNN\DemoDaNN"/>
+		<item value="D:\Users\welcome\workspace\QuanLySach"/>
+		<item value="D:\Users\welcome\workspace\SwingTuLuyen"/>
+		<item value="C:\My Web Sites\StyleGuide"/>
+		<item value="C:\Users\TRANTHANHDIEN1\Desktop\Project-HCI\Project-HCI"/>
+		<item value="D:\Users\welcome\workspace\KetNoiAccess"/>
+		<item value="D:\Users\welcome\workspace\KetNoiSqlServer"/>
+		<item value="D:\Users\welcome\workspace\KetNoi"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\electro-colorlib\electro"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\lab4\thanhnga82\WebContent"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\Pagination"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\lab4\thanhnga82\build"/>
+		<item value="D:\Users\welcome\workspace\Bai33_PreparedStatement"/>
+		<item value="E:\WorkSpace\ConnectAccess"/>
+		<item value="E:\WorkSpace\Statement"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\lab4\thanhnga82"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\FPattern\ecologicalwebsitetemplate"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\Landscaper Free Website Template - Free-CSS.com"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\Navigation Menu\menu10\menu10"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\Navigation Menu\menu5"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH WEB\Touche Free Website Template - Free-CSS.com"/>
+		<item value="E:\WorkSpace\LTWeb"/>
+		<item value="E:\WorkSpace\HCI_PROFILE"/>
+		<item value="E:\WorkSpace\LTM"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\yourtrip"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\html"/>
+		<item value="F:\DOCUMENT\GIAO TIẾP NGƯỜI MÁY\weblab_free_standard"/>
+		<item value="D:\Users\welcome\workspace\File"/>
+		<item value="E:\WorkSpace\Source code quan ly nhan su  ja-va + bao cao"/>
+		<item value="F:\DOCUMENT\LẬP TRÌNH NÂNG CAO-CÔ NGA\Source code quan ly nhan su  java + bao cao"/>
+		<item value="D:\Users\welcome\workspace\Bai2_Servlet"/>
+		<item value="F:\DOCUMENT\JAVA-CƠ BẢN VÀ NÂNG CAO\Code Java cơ bản\SourceCode\Project_QLDanhBa"/>
+		<item value="D:\Users\welcome\workspace\AllExample"/>
+		<item value="D:\Users\welcome\workspace\MP3App"/>
+		<item value="D:\Users\welcome\workspace\Bai29_Statement"/>
+	</list>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="580" key="DIALOG_HEIGHT"/>
+		<item value="429" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

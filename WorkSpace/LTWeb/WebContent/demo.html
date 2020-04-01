@@ -1,0 +1,317 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>Quản lý khách hàng</title>
+</head>
+<body>
+	<header> <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="img/icon2.jpg" />
+<!-- Bootstrap -->
+<link href="/vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link href="/vendors/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+
+<!-- Datatables -->
+<link href="/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"
+	rel="stylesheet">
+<style type="text/css">
+th {
+	text-align: center;
+}
+
+.modal-header, h4, .close {
+	background-color: #5cb85c;
+	color: white !important;
+	text-align: center;
+	font-size: 30px;
+}
+
+.modal-footer {
+	background-color: #f9f9f9;
+}
+</style>
+</head>
+<body>
+	
+</body>
+	</html>
+	</header>
+	<script>
+		$(".customer").addClass('active');
+	</script>
+	<div class="container">
+		<div class="row">
+			<h2>
+				<strong>Quản lí sản phẩm</strong>
+			</h2>
+		</div>
+		<br>
+		<div class="row" style="margin-bottom: 10px;">
+			<a href="ThemKH.jsp"><button class="btn btn-sm btn-success"
+					id="Them">
+					<span class="glyphicon glyphicon-plus"></span> Thêm sản phẩm
+				</button></a>
+		</div>
+		<div class="row"></div>
+		<table id="example" class="table table-striped table-bordered"
+			style="width: 100%">
+			<thead>
+				<tr>
+					<th>Mã khách hàng</th>
+					<th>Tên khách hàng</th>
+					<th>Ngày sinh</th>
+					<th>Tài khoản</th>
+					<th>Số điện thoại</th>
+					<th>Mật khẩu</th>
+					<th>Thao tác</th>
+				</tr>
+			</thead>
+			<tbody id="myTable">
+
+				<tr>
+					<td>202</td>
+					<td>Trần Thị Trúc Giang</td>
+					<td>1998-02-04</td>
+					<td>GiangDien</td>
+					<td>01648692998</td>
+					<td>Giang</td>
+					<td><a href="XoaKhachHang?makh=202"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=202"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>203</td>
+					<td>Nguyễn Thương Hoài</td>
+					<td>1995-02-08</td>
+					<td>HoaiBD</td>
+					<td>01654552878</td>
+					<td>hoai</td>
+					<td><a href="XoaKhachHang?makh=203"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=203"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>204</td>
+					<td>Trần Thị Mỹ Linh</td>
+					<td>2018-06-25</td>
+					<td>Linh</td>
+					<td>0123457865</td>
+					<td>linh</td>
+					<td><a href="XoaKhachHang?makh=204"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=204"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>205</td>
+					<td>Trần Thị Ánh Tuyết</td>
+					<td>2018-07-22</td>
+					<td>Anh Tuyêt</td>
+					<td>01654789151</td>
+					<td>Tuyet</td>
+					<td><a href="XoaKhachHang?makh=205"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=205"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>208</td>
+					<td>Trần Thị Thúy Trang</td>
+					<td>2018-06-30</td>
+					<td>Trang</td>
+					<td>0125488760</td>
+					<td>Trang</td>
+					<td><a href="XoaKhachHang?makh=208"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=208"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>209</td>
+					<td>Long Khánh</td>
+					<td>2018-06-30</td>
+					<td>Khanh</td>
+					<td>01654789151</td>
+					<td>khanh</td>
+					<td><a href="XoaKhachHang?makh=209"><button type="submit"
+								class="btn btn-sm btn-danger" id="" aria-label="Right Align"
+								title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=209"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>KH114</td>
+					<td>Vương Uyển Nhi</td>
+					<td>2018-07-06</td>
+					<td>UyenNhi</td>
+					<td>01654789151</td>
+					<td>nhi</td>
+					<td><a href="XoaKhachHang?makh=KH114"><button
+								type="submit" class="btn btn-sm btn-danger" id=""
+								aria-label="Right Align" title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=KH114"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>KH200</td>
+					<td>Trần Quốc Khánh</td>
+					<td>2018-07-14</td>
+					<td>QuocKhanh</td>
+					<td>01654789151</td>
+					<td>nhi</td>
+					<td><a href="XoaKhachHang?makh=KH200"><button
+								type="submit" class="btn btn-sm btn-danger" id=""
+								aria-label="Right Align" title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=KH200"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>NH1001</td>
+					<td>Lê Thanh Phong</td>
+					<td>2018-07-15</td>
+					<td>nguyentu</td>
+					<td>01654789151</td>
+					<td>phong</td>
+					<td><a href="XoaKhachHang?makh=NH1001"><button
+								type="submit" class="btn btn-sm btn-danger" id=""
+								aria-label="Right Align" title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=NH1001"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+				<tr>
+					<td>Nh145</td>
+					<td>Hồ Sỹ Huy</td>
+					<td>2018-07-08</td>
+					<td>Sy Huy</td>
+					<td>0123457865</td>
+					<td>huy</td>
+					<td><a href="XoaKhachHang?makh=Nh145"><button
+								type="submit" class="btn btn-sm btn-danger" id=""
+								aria-label="Right Align" title="Xóa">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button> </a> <a href="VeiwKhachHang?makh=Nh145"><button type="submit"
+								class="btn  btn-sm btn-warning" aria-label="Right Align"
+								title="Sửa">
+								<span class="glyphicon glyphicon-edit"></span>
+							</button></a></td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.jss"></script>
+	<script
+		src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+	<script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+
+	<script>
+        $(document).ready(function(){
+        	  $("#myInput").on("keyup", function() {
+        	    var value = $(this).val().toLowerCase();
+        	    $("#myTable tr").filter(function() {
+        	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        	    });
+        	  });
+        	});
+        	</script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+section {
+    font-weight: 400;
+}
+
+.itw_search_form {
+    padding: 10px 30px 20px;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 5px;
+}
+
+.itw_page{
+    background: #f3f3f5;
+}
+
+.home-wrapper {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.itw_hero_banner {
+    background: none;
+    display: block;
+    max-height: 420px;
+}
+
+.footer_link_section li a, .footer_link_section h2, .footer_link_section a.see_more_jobs {
+    color: #333;
+}
+
+.footer_link_section {
+    background: #ffffff;
+    border-top: 1px solid #e3e3e3;
+}
+
+.itw_hero_banner_container {
+    /*background: url(/static/img/homepage/cover_topitworks.jpeg) top right no-repeat;*/
+    /*background-size: cover;*/
+    /*min-height: 400px;*/
+    /*padding-top: 130px;*/
+    /*cursor: pointer;*/
+}
+
+.section-title {
+    overflow: hidden;
+    text-align: center;
+    color: #424242;
+    border-bottom: none;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 36px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section-title:before,
+.section-title:after {
+    background-color: #cacbcb;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.section-title:before {
+    right: 0.8em;
+    margin-left: -50%;
+}
+
+.section-title:after {
+    left: 0.8em;
+    margin-right: -50%;
+}
+
+/* top job section */
+
+.job-list-wrapper {
+    padding: 45px 30px 5px;
+    background: #ffffff;
+}
+
+.job-item-wrapper {
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.job-item-wrapper:hover {
+    border-color: transparent;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    background-color: #24b8eb17;
+}
+
+.job-item-wrapper {
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+}
+
+.job-item-wrapper h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 5px;
+    color: #333;
+}
+
+.text-org {
+    color: #f08824;
+}
+
+.text-grey {
+    color: #676a6c;
+}
+
+/* top job section */
+
+/* home banner */
+
+.home-banner {
+    background: rgb(248, 251, 253);
+    padding: 80px 0;
+}
+
+.banner-wrapper {
+    margin: 0 10%;
+}
+
+.hover-float:hover {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+}
+
+.hover-float{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.banner-item {
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+
+    width: 100%;
+}
+
+.banner-info{
+    position: absolute;
+    padding: 15px 20px;
+    bottom: 0;
+    background: rgba(34, 34, 34, 0.75);
+    color: #ffffff;
+    width: 100%;
+}
+
+/* end home banner */
+
+/* company spotlight */
+
+.slick-arrow {
+    border: 1px solid #f08824;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #f08824;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-arrow.nextprevleft {
+    left: -8%;
+}
+
+.slick-arrow.nextprevright {
+    right: -8%;
+}
+
+#userFeedback .slick-arrow.nextprevleft {
+    left: -18%;
+}
+
+#userFeedback .slick-arrow.nextprevright {
+    right: -18%;
+}
+
+.slick-dots li button:before {
+    color: #00b9f2;
+    font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #005b89;
+}
+
+.short-desc {
+    color: #00b9f2;
+}
+
+.long-desc {
+    color: #676a6c;
+}
+
+.company-info .long-desc:after {
+    content  : "";
+    position : absolute;
+    z-index  : 1;
+    bottom   : 0;
+    left     : 0;
+    pointer-events   : none;
+    background-image : linear-gradient(to bottom,
+    rgba(255,255,255, 0),
+    rgba(255,255,255, 1) 90%);
+    width    : 100%;
+    height   : 4em;
+}
+
+.company-info .long-desc{
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.company-info h4{
+    font-size: 25px;
+}
+.company-info {
+    margin: 0 15%;
+    position: relative;
+    top: -70px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+}
+
+.view-more-btn {
+    padding: 8px 20px;
+    color: #f08824;
+    border: 1px solid #f08824;
+    border-radius: 2px;
+    font-weight: 600;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.view-more-btn:hover {
+    border-color: transparent;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    color: #fff;
+    background: #f08824;
+}
+
+/* end company spotlight */
+
+/* blog article */
+.article-wrapper {
+    padding: 45px 30px;
+    background: #fff;
+}
+
+.article-item {
+    border: 1px solid #e3e3e3;
+    background: #fff;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.article-item:hover {
+    border-color: transparent;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+}
+
+.article-info {
+    color: #333;
+}
+
+.article-item .blog-cat {
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    padding: 5px 10px;
+    left: 0px;
+    color: #ffffff;
+    top: -15px;
+    z-index: 1;
+}
+
+/* end blog article */
+
+/* user feedback */
+.feedback-wrapper {
+    margin: 20px 15% 0px;
+}
+
+.user-feedback {
+    background: #ffffff;
+    padding: 50px 0px 140px;
+}
+
+/* end user feedback */
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.social-content {
+    padding: 20px 0px;
+    background: #ffffff;
+}
+
+.social-btn a.social-facebbook:hover {
+    background: #3b5998;
+    color: #fff;
+}
+
+.social-btn a.social-youtube:hover {
+    background: #C63D2D;
+    color: #fff;
+}
+
+.social-btn a.social-linkedin:hover {
+    background: #4875B4;
+    color: #fff;
+}
+
+.social-btn a {
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin: 0 5px;
+    background: #0D1E33;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+    .itw_hero_banner_container{
+        padding-top: 50px;
+    }
+
+    .top-job, .home-banner{
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .home-banner .banner-wrapper{
+        margin: 0;
+    }
+    .home-banner .banner-item{
+        margin-bottom: 30px;
+    }
+    .home-banner{
+        padding: 30px 0px 0px;
+    }
+    .company-spotlight{
+        margin-top: 30px;
+    }
+
+    .section-title{
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    .section-title:before, .section-title:after{
+        background-color: transparent;
+    }
+
+    .article-item .blog-cat{
+        top: 30px;
+    }
+
+    .blog-article{
+        margin-top: 0;
+    }
+    .blog-article .slick-dots{
+        bottom: -36px;
+    }
+
+    .company-spotlight .el-wrapper31{
+        padding-top: 61.8%;
+    }
+
+    .company-spotlight .company-info{
+        margin: 0 5%;
+    }
+
+    .section-title{
+        text-align: center;
+    }
+
+    .article-wrapper{
+        padding: 45px 30px 30px;
+    }
+
+    .company-spotlight .slick-arrow{
+     display: none;
+    }
+}

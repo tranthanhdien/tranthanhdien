@@ -1,0 +1,4 @@
+16130326	Trần Thanh Điền	Lý thuyết đồ thị	9.0	Lập trình mạng	8.0
+16130326	Nguyễn Văn A	Lập trình cơ bản	3.0	Lập trình mạng	8.0	Lý thuyết đồ thị	9.0
+16130326	Nguyễn Thị B	Lập trình web	5.0	Lập trình nâng cao	8.0
+16130326	Lê Văn C	Mạng máy tính	5.0	Lý thuyết đồ thị	9.0	Lập trình web	5.0	Lập trình nâng cao	8.0

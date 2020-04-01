@@ -1,0 +1,4 @@
+p1	Product1	250000	4
+p2	Product2	450000	3
+p3	Product3	350000	4
+p4	Product4	780000	5

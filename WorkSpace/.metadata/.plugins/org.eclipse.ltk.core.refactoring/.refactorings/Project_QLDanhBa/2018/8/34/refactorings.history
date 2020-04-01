@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;src&apos; to &apos;QLDanhBa&apos;&#x0D;&#x0A;- Original project: &apos;Project_QLDanhBa&apos;&#x0D;&#x0A;- Destination element: &apos;QLDanhBa&apos;&#x0D;&#x0A;- Original element: &apos;Project_QLDanhBa/src&apos;" description="Copy source folder" destination="=QLDanhBa" element1="/src" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1534680734169" version="1.0"/>
+</session>

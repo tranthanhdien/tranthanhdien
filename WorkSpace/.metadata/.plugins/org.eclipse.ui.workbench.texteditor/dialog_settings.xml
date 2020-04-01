@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Hire me" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Hire me"/>
+			<item value="Thủ Đức"/>
+			<item value="What"/>
+			<item value="Instagram"/>
+			<item value="Experience"/>
+			<item value="2.92"/>
+			<item value="Resume"/>
+			<item value="TP.HCM"/>
+			<item value="Web Des"/>
+			<item value="man-home"/>
+			<item value="Calendar"/>
+			<item value="What i’m doing"/>
+			<item value="Always improve skills of myself to become a professional"/>
+			<item value="Hello"/>
+			<item value="Client"/>
+		</list>
+		<list key="replacehistory">
+			<item value="image"/>
+			<item value="2k3😀 1m60😎 26-03 😘’ Độc thân"/>
+			<item value="Nguyễn Thị Hồng Duyên"/>
+			<item value="/"/>
+			<item value="js/"/>
+			<item value="images"/>
+			<item value=""/>
+			<item value="image/avatar.jpg"/>
+			<item value="csstuyen"/>
+			<item value=".jpg"/>
+			<item value="lab4/img/"/>
+			<item value="lab4/img"/>
+			<item value="lab4/js/"/>
+			<item value="lab4/extras"/>
+			<item value="lab4/fonts/"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="369" key="DIALOG_X_ORIGIN"/>
+		<item value="284" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

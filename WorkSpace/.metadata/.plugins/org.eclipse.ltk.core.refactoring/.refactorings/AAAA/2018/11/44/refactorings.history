@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 elements to &apos;js&apos;&#x0D;&#x0A;- Original project: &apos;AAAA&apos;&#x0D;&#x0A;- Destination element: &apos;js&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     jquery.min.js&#x0D;&#x0A;     nouislider.min.js&#x0D;&#x0A;     slick.min.js&#x0D;&#x0A;     bootstrap.min.js&#x0D;&#x0A;     main.js&#x0D;&#x0A;     jquery.zoom.min.js" description="Copy files" element1="WebContent/js/jquery.min.js" element2="WebContent/js/nouislider.min.js" element3="WebContent/js/slick.min.js" element4="WebContent/js/bootstrap.min.js" element5="WebContent/js/main.js" element6="WebContent/js/jquery.zoom.min.js" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1541167035563" target="/MyWeb/WebContent/js" units="0" version="1.0"/>
+</session>

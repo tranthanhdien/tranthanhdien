@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #34b67a;
+	width: 930px;
+	margin-left: 200px;
+	padding: -20px;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #1c8d56;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #1c8d56;
+	color: white;
+}
+
+#title {
+	text-align: center;
+	color: #34b67a;
+	margin-top: 20px;
+	font-weight: bold;
+	
+}
+
+#trip {
+	    margin-left: 200px;
+    text-align: center;
+    background-color: #dadada;
+    padding: 12px;
+    color: #34b67a;
+    margin-top: -23px;
+    width: 930px;
+}
+
+#tripp {
+	margin-left: 200px;
+	text-align: center;
+	background-color: #dadada;
+	padding: 12px;
+	color: #232323;
+	width: 930px;
+}
+
+.infor {
+	background-color: #f1f1f1;
+	margin-top: -16px;
+}
+
+#center {
+	width: 900px;
+	margin-left: 260px;
+	margin-top: 40px;
+}
+
+#home {
+	margin-left: 200px;
+	width: 46px;
+	height: 44px;
+	background: url(img_navsprites.gif) 0 0;
+}
+
+#background {
+	width: 930px;
+    margin-left: 200px;
+    background-color: #f1f1f1;
+    margin-top: -5px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CSS3 Menu</title>
+<style>
+/*Main Menu*/
+#LightBack {
+	background-color: #333;
+}
+
+nav {
+	margin: 0px auto;
+	text-align: center;
+	width: 990px;
+	padding: 0px 0 0 0px;
+	height: 45px;
+	border-bottom: 1px solid #333;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0 5px;
+	margin: 0;
+}
+
+nav ul li {
+	margin: 0;
+	display: block;
+}
+
+nav ul li a {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	border-radius: 6px 6px 0px 0px;
+	height: 25px;
+	padding: 10px 20px;
+	margin-right: 5px;
+	float: left;
+	transform: translateY(0px);
+	transition: All 0.4s ease;
+	-moz-transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
+	height: 25px;;
+	transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-webkit-transform: translateY(-10px);
+	-moz-box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Dark - Light*/
+.Dark {
+	border-bottom: 1px solid #333;
+}
+
+.Dark ul li a {
+	background-color: #333;
+	color: #FFF;
+	border-bottom: 1px solid rgba(255, 255, 255, 0)
+}
+
+.Dark ul li a:hover {
+	background-color: #333;
+	color: #FFF;
+	border-bottom: 1px solid rgba(255, 255, 255, 2)
+}
+
+.Light {
+	border-bottom: 1px solid #FFF;
+}
+
+.Light ul li a {
+	background-color: #FFF;
+	color: #333;
+	border-bottom: 1px solid rgba(50, 50, 50, 0)
+}
+
+.Light ul li a:hover {
+	background-color: #FFF;
+	color: #333;
+	border-bottom: 1px solid rgba(50, 50, 50, 2)
+}
+
+/*Colors*/
+.Red ul li a:hover {
+	background-color: Red;
+}
+
+.Blue ul li a:hover {
+	background-color: DeepSkyBlue;
+}
+
+.Green ul li a:hover {
+	background-color: Green;
+}
+
+.Orange ul li a:hover {
+	background-color: Orange;
+}
+
+.YellowGreen ul li a:hover {
+	background-color: YellowGreen;
+}
+
+.Crimson ul li a:hover {
+	background-color: Crimson;
+}
+
+.LightSeaGreen ul li a:hover {
+	background-color: LightSeaGreen;
+}
+
+.SlateBlue  ul li a:hover {
+	background-color: SlateBlue;
+}
+</style>
+</head>
+
+<body>
+	<nav class="Light Red">
+		<ul>
+			<li><a href="index.html">Trang chủ</a></li>
+			<li><a href="gioithieu.html">Giới thiệu</a></li>
+			<li><a href="sanpham.html">Sản phẩm</a></li>
+			<li><a href="dichvu.html">Dịch vụ</a></li>
+			<li><a href="tintuc.html">Tin tức</a></li>
+			<li><a href="tuyendung.html">Tuyển dụng</a></li>
+			<li><a href="lienhe.html">Liên hệ</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
