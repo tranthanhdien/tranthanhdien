@@ -1,0 +1,63 @@
+package ttdien.rmi.file;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+import ttd.rmi.IFile;
+
+public class FileClient {
+	BufferedReader userrIn;
+	boolean isLogin;
+
+	public void start() throws NotBoundException, IOException {
+		Registry re = LocateRegistry.getRegistry("127.0.0.1", 12345);
+		IFile file = (IFile) re.lookup("test");
+		userrIn = new BufferedReader(new InputStreamReader(System.in)); // đọc dữ liệu bàn phím
+		String line;
+		while (true) {
+			try {
+				line = userrIn.readLine();
+				if (line.equalsIgnoreCase("QUIT"))
+					break;
+				// ktra phải cho nó đăng nhập trước
+				if (!isLogin) {
+					System.out.println("Vui lòng đăng nhập");
+					StringTokenizer token = new StringTokenizer(line);
+					String action = token.nextToken();
+					switch (action) {
+					case "USER":
+						try {
+							String name = token.nextToken();
+							file.checkName(name);
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập sai cú pháp");
+						}
+
+						break;
+					case "PASS":
+						String pass = token.nextToken();
+						file.checkPass(pass);
+						isLogin = true;
+					default:
+						System.out.println("Nhập ko đúng cú pháp");
+						break;
+					}
+				}
+			} catch (RemoteException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		userrIn.close();
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

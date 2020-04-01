@@ -1,0 +1,74 @@
+package ttdien.rmi;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+import ttdien.rmi.file.IFile;
+
+public class FileClient {
+	BufferedReader userIn;
+	boolean isLogin;
+
+	public void start() throws NotBoundException, IOException {
+		Registry re = LocateRegistry.getRegistry("127.0.0.1", 1212);
+		IFile file = (IFile) re.lookup("test");
+		System.out.println("WELCOME TO MANAGE PRODUCT SYSTEM");
+		userIn = new BufferedReader(new InputStreamReader(System.in)); // đọc từ người dùng
+		String line;
+		StringTokenizer token;
+		System.out.println("Welcome...");
+		while (true) {
+			try {
+				line = userIn.readLine();
+				if (line.equalsIgnoreCase("EXIT"))
+					break;
+				if (!isLogin) {
+
+					token = new StringTokenizer(line);
+					String action = token.nextToken();
+					switch (action) {
+					case "USER":
+						try {
+							String name = token.nextToken();
+							if (file.checkName(name)) {
+								System.out.println("OK");
+							} else {
+								System.out.println("False");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "PASS":
+						try {
+
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+
+					default:
+						break;
+					}
+				} else {
+					// đã đăng nhập
+				}
+
+			} catch (RemoteException e) {
+				System.out.println(e.getMessage());
+			}
+
+		}
+	}
+
+	public static void main(String[] args) {
+		FileClient client = new FileClient();
+	}
+}

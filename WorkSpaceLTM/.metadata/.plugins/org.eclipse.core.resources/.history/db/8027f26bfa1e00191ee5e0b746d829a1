@@ -1,0 +1,29 @@
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class DownloadImpl extends UnicastRemoteObject implements IDownload {
+
+	protected DownloadImpl() throws RemoteException {
+		super();
+	}
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public void openSource(String sf) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void readData() throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeSource() throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

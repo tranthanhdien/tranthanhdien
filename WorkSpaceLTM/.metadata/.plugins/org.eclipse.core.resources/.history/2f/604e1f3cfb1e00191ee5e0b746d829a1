@@ -1,0 +1,41 @@
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DownloadImpl extends UnicastRemoteObject implements IDownload {
+	List<BufferedInputStream> list = new ArrayList<>();
+
+	protected DownloadImpl() throws RemoteException {
+		super();
+	}
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public void openSource(String sf) throws RemoteException {
+		try {
+			list.add(new BufferedInputStream(new FileInputStream(new File(sf))));
+
+		} catch (Exception e) {
+			throw new RemoteException(e.getMessage());
+		}
+
+	}
+
+	@Override
+	public void readData() throws RemoteException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void closeSource() throws RemoteException {
+		
+
+	}
+
+}

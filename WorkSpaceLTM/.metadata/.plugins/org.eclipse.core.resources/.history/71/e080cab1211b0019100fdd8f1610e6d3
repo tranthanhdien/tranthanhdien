@@ -1,0 +1,98 @@
+package ttd.rmi;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+
+import ttd.rmi.model.Data;
+import ttd.rmi.model.User;
+
+public class FileImpl extends UnicastRemoteObject implements IFile {
+	private static final long serialVersionUID = 1L;
+	ArrayList<User> users;
+	User user;
+	BufferedInputStream bis;
+	BufferedOutputStream bos;
+	protected FileImpl() throws RemoteException {
+		super();
+		users = Data.createList();
+		user = new User();
+	}
+
+	@Override
+	public boolean checkName(String name) throws RemoteException {
+		for (User user : users) {
+			if (user.getName().equalsIgnoreCase(name)) {
+				// this.user = new User(name, null);
+				this.user.setName(name);
+				return true;
+			}
+		}
+		this.user = null;
+		return false;
+	}
+
+	@Override
+	public boolean checkPass(String pass) throws RemoteException {
+		if (user == null) {
+			// nếu = null thì quăng về cho client biết
+			throw new RemoteException("Vui lòng nhập tên");
+		}
+		for (User user : users) {
+			if (user.getName().equalsIgnoreCase(this.user.getName()) && (user.getPass().equalsIgnoreCase(pass))) {
+				this.user = new User(this.user.getName(), pass);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public void createDest(String destFile) throws RemoteException {
+		try {
+			bos = new BufferedOutputStream(new FileOutputStream(destFile));
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			throw new RemoteException("Không tạo được file đích");
+		}
+	}
+
+	@Override
+	public void writeData(byte[] arr, int len) throws RemoteException {
+
+	}
+
+	@Override
+	public void closeData() throws RemoteException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void openSource(String sf) throws RemoteException {
+		try {
+			bis = new BufferedInputStream(new FileInputStream(sf));
+		} catch (FileNotFoundException e) {
+			throw new RemoteException("Không tìm thấy file nguồn");
+		}
+	}
+
+	@Override
+	public byte[] readData(byte[] arr) throws RemoteException {
+		return null;
+	}
+
+	@Override
+	public void closeSource() throws RemoteException {
+
+	}
+
+}

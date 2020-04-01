@@ -1,0 +1,5 @@
+package ttd.rmi;
+
+public class FileServer {
+
+}

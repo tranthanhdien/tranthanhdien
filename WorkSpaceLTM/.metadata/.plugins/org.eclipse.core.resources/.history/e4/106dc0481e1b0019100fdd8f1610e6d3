@@ -1,0 +1,14 @@
+package ttd.rmi.model;
+
+import java.util.ArrayList;
+
+public class Data {
+	public static ArrayList<User> createList() {
+		ArrayList<User> listUsers = new ArrayList<>();
+		listUsers.add(new User("dien", "1234"));
+		listUsers.add(new User("an", "4321"));
+		listUsers.add(new User("ti", "4567"));
+		listUsers.add(new User("heo", "7654"));
+	}
+
+}

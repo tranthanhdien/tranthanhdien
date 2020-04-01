@@ -1,0 +1,19 @@
+package ttdien.rmi.file;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface IFile extends Remote {
+	public boolean checkName(String name) throws RemoteException;
+	public boolean checkPass(String pass) throws RemoteException;
+	// add
+	
+	// remove
+	
+	// edit
+	
+	// view(tìm kiếm)
+	
+	// quit
+
+}

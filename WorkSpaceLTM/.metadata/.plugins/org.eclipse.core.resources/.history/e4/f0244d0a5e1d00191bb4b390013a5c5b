@@ -1,0 +1,5 @@
+package ttdien.rmi;
+
+public class FileClient {
+
+}

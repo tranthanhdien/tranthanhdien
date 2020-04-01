@@ -1,0 +1,101 @@
+package ttdien.rmi.file;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+import ttd.rmi.IFile;
+
+public class FileClient {
+	BufferedReader userrIn;
+	boolean isLogin;
+	BufferedInputStream bis;
+	BufferedOutputStream bos;
+
+	public void start() throws NotBoundException, IOException {
+		Registry re = LocateRegistry.getRegistry("127.0.0.1", 12345);
+		IFile file = (IFile) re.lookup("test");
+		userrIn = new BufferedReader(new InputStreamReader(System.in)); // đọc dữ liệu bàn phím
+		String line;
+		StringTokenizer token;
+		
+		while (true) {
+			try {
+				line = userrIn.readLine();
+				if (line.equalsIgnoreCase("QUIT"))
+					break;
+				// ktra phải cho nó đăng nhập trước
+				if (!isLogin) {
+					// chưa đăng nhập, bắt buộc
+					System.out.println("Vui lòng đăng nhập");
+					token = new StringTokenizer(line);
+					String action = token.nextToken();
+					switch (action) {
+					case "USER":
+						try {
+							String name = token.nextToken();
+							if(file.checkName(name)) {
+								System.out.println("Username OK!");
+							} else {
+								System.out.println("Username fail!");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập sai cú pháp, thiếu dữ liệu");
+						}
+
+						break;
+					case "PASS":
+						String pass = token.nextToken();
+						if (file.checkPass(pass)) {
+							System.out.println("Login thành công");
+							isLogin = true;
+						} else {
+							System.out.println("Login thất bại");
+						}
+						
+					default:
+						System.out.println("Nhập ko đúng cú pháp");
+						break;
+					}
+				} else {
+					// ngược lại đã đăng nhập
+					// thực hiện SEND, GET
+					token = new StringTokenizer(line);
+					String action = token.nextToken();
+					String sf, df;
+					switch (action) {
+					case "SEND":
+						// gửi từ client lên server
+						try {
+							sf = token.nextToken();
+							df = token.nextToken();
+						} catch (Exception e) {
+							System.out.println("Sai cú pháp");
+						}
+						break;
+					case "GET":
+						
+						break;
+					default:
+						break;
+					}
+				}
+			} catch (RemoteException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		userrIn.close();
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

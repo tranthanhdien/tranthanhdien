@@ -1,0 +1,62 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.StringTokenizer;
+
+public class ServerComputing extends Thread {
+	Socket socket;
+	BufferedReader br;
+	PrintWriter pw;
+
+	public ServerComputing(Socket socket, BufferedReader br, PrintWriter pw) {
+		this.socket = socket;
+		this.br = br;
+		this.pw = pw;
+	}
+
+	// xử lí
+	public void run() {
+		try {
+			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			String line = br.readLine();
+			if (line.equalsIgnoreCase("Exit")) {
+				System.out.println("Goodbye!");
+				pw.close();
+				socket.close();
+				return;
+			}
+			StringTokenizer token = new StringTokenizer(line);
+			String command = token.nextToken();
+			switch (command) {
+			case "+":
+
+				break;
+			case "-":
+
+				break;
+			case "*":
+
+				break;
+			case "/":
+
+				break;
+
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		ServerSocket socket = new ServerSocket(12345);
+		System.out.println("Waiting...");
+		socket.accept();
+		System.out.println("Connected");
+	}
+
+}

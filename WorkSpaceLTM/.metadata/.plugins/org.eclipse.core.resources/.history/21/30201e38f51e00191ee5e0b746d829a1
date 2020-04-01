@@ -1,0 +1,29 @@
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class UploadImpl extends UnicastRemoteObject implements IUpload{
+
+	protected UploadImpl() throws RemoteException {
+		super();
+	}
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public int createFile(String df) throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public byte[] writeData(int id, byte[] arr, int length) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void closeFile(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+import java.rmi.RemoteException;
+
+public interface IDownload {
+	// download từ Server về Client
+	// b1: mở source trên Server ra
+	public void openSource(String sf) throws RemoteException; 
+	// b2: đọc dữ liệu file trên Server vừa mở
+	
+	// b3: đóng dữ liệu
+	public void closeSource(int id) throws RemoteException;
+}

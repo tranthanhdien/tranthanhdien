@@ -1,0 +1,5 @@
+package lt.tcp;
+
+public class Server {
+
+}

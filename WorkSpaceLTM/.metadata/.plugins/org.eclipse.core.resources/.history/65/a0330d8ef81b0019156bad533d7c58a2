@@ -1,0 +1,84 @@
+package dangnhapPOP3;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class StudentDAO {
+	static ArrayList<Student> list = new ArrayList<>();
+	static {
+		String csdl = "C:\\CSDL\\csdl.accdb";
+		String url = "jdbc:ucanaccess://" + csdl;
+		try {
+			Connection conn = DriverManager.getConnection(url);
+			String sql = "SELECT * FROM Student";
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery(sql);
+			while (rs.next()) {
+				list.add(new Student(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getDouble(4)));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static ArrayList<Student> findById(String id) {
+		ArrayList<Student> li = new ArrayList<>();
+		String csdl = "C:\\CSDL\\csdl.accdb";
+		String url = "jdbc:ucanaccess://" + csdl;
+		try {
+			Connection conn = DriverManager.getConnection(url);
+			String sql = "SELECT * FROM Student WHERE massv =" + '" +id +"';
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery(sql);
+			while(rs.next()) {
+				li.add(new Student(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getDouble(4)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return li;
+	}
+
+	public static ArrayList<Student> findByName(String name) {
+		ArrayList<Student> li = new ArrayList<>();
+		String csdl = "C:\\CSDL\\csdl.accdb";
+		String url = "jdbc:ucanaccess://" + csdl;
+		try {
+			Connection conn = DriverManager.getConnection(url);
+			String sql = "SELECT * FROM Student WHERE name = name";
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery(sql);
+			while (rs.next()) {
+				li.add(new Student(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getDouble(4)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return li;
+	}
+
+	public static ArrayList<Student> findByAge(int age) {
+		ArrayList<Student> li = new ArrayList<>();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getAge() == age) {
+				li.add(list.get(i));
+			}
+		}
+		return li;
+	}
+
+	public static ArrayList<Student> findByScore(double score) {
+		ArrayList<Student> li = new ArrayList<>();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getScore() == score) {
+				li.add(list.get(i));
+			}
+		}
+		return li;
+	}
+
+}

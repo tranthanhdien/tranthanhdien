@@ -1,0 +1,15 @@
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class ServerComputing {
+	static int PORT = 12345;
+	static String host = "127.0.0.1";
+	public static void send() throws UnknownHostException, IOException {
+		Socket socket = new Socket(host, PORT);
+	}
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		send();
+	}
+
+}

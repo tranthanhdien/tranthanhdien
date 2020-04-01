@@ -1,0 +1,31 @@
+package dangnhapPOP3;
+
+import java.util.ArrayList;
+
+public class UserDAO {
+	static ArrayList<User> list = new ArrayList<>();
+//	static {
+//		list.add(new User("dien", "123"));
+//		list.add(new User("dai", "123"));
+//		list.add(new User("truong", "123"));
+//		list.add(new User("hien", "123"));
+//		list.add(new User("ha", "123"));
+//	}
+	public static boolean checkUserName(String name) {
+		for(User user: list) {
+			if (user.getName().equalsIgnoreCase(name)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public static boolean checkUserPass(String name, String pass) {
+		for(User user: list) {
+			if ((user.getName().equalsIgnoreCase(name)) && (user.getPass().equalsIgnoreCase(pass))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

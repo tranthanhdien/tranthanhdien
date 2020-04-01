@@ -1,0 +1,9 @@
+package ttd.rmi;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface IFile extends Remote {
+	boolean checkName(String name) throws RemoteException; // kiểm tra tên có tồn tại k
+
+}

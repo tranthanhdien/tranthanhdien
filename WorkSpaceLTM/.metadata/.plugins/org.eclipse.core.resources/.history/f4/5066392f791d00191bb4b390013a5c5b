@@ -1,0 +1,5 @@
+package ttdien.rmi.file;
+
+public class DatabaseConnection {
+
+}

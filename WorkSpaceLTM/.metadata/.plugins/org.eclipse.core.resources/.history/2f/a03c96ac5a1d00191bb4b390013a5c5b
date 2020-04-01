@@ -1,0 +1,5 @@
+package ttdien.rmi.model;
+
+public class Product {
+
+}

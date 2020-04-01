@@ -1,0 +1,54 @@
+package De1;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.util.StringTokenizer;
+
+public class FileServerProcess extends Thread {
+	private Socket socket;
+	private DataInputStream dis;
+	private DataOutputStream dos;
+	private String serverDir;
+
+	public FileServerProcess(Socket socket) throws IOException {
+		this.socket = socket;
+		dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+		dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+
+	}
+
+	public void run() {
+		String line;
+		while (true) {
+			try {
+				// đọc lên từ Client
+				line = dis.readUTF();
+				process(line);
+				if (line.equalsIgnoreCase("QUIT")) break;
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		dis.close();
+		dos.flush();
+		dos.close();
+		socket.close();
+	}
+
+	private void sendFile(String sf) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void receiveFile(String df) {
+		// TODO Auto-generated method stub
+
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;rmiupload&apos; to &apos;RMI_UploadServer&apos;&#x0D;&#x0A;- Original project: &apos;RMI_UploadClient&apos;&#x0D;&#x0A;- Destination element: &apos;RMI_UploadServer&apos;&#x0D;&#x0A;- Original element: &apos;rmiupload&apos;" description="Copy folder" destination="=RMI_UploadServer" element1="rmiupload" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1548238692040" units="0" version="1.0"/>
+</session>

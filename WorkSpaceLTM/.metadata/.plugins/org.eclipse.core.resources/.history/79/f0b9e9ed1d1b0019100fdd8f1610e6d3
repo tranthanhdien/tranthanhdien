@@ -1,0 +1,5 @@
+package ttd.rmi.model;
+
+public class User {
+
+}

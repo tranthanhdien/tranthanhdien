@@ -1,0 +1,7 @@
+package ttdien.rmi.file;
+
+import java.rmi.Remote;
+
+public interface IFile extends Remote {
+
+}

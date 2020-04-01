@@ -1,0 +1,70 @@
+package ttd.rmi;
+
+import java.io.DataInputStream;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+
+import ttd.rmi.model.Data;
+import ttd.rmi.model.User;
+
+public class FileImpl extends UnicastRemoteObject implements IFile  {
+	private static final long serialVersionUID = 1L;
+	ArrayList<User> users;
+	User user;
+	protected FileImpl() throws RemoteException {
+		super();
+		users = Data.createList();
+		user = null;
+	}
+	@Override
+	public boolean checkName(String name) throws RemoteException {
+		for (User user : users) {
+			if (user.getName().equalsIgnoreCase(name)) {
+			//	this.user = new User(name, null);
+				this.user.setName(name);
+				return true;
+			}
+		}
+		return false;
+	}
+	@Override
+	public boolean checkPass(String pass) throws RemoteException {
+		if (user==null) {
+			
+		}
+		for (User user : users) {
+			if (user.getPass().equalsIgnoreCase(pass)) {
+				this.user.setPass(pass);
+			}
+		}
+	}
+	@Override
+	public void createDest(String destFile) throws RemoteException {
+		
+	}
+	@Override
+	public void writeData(byte[] arr, int len) throws RemoteException {
+		
+	}
+	@Override
+	public void closeData() throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void openSource(String df) throws RemoteException {
+		
+	}
+	@Override
+	public byte[] readData(byte[] arr) throws RemoteException {
+		return null;
+	}
+	@Override
+	public void closeSource() throws RemoteException {
+		
+	}
+
+	
+
+}

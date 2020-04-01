@@ -1,0 +1,67 @@
+package De1;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.StringTokenizer;
+
+public class Client {
+	private Socket socket;
+	private DataInputStream dis;
+	private DataOutputStream dos;
+	private BufferedReader userIn; // cái này để người dùng tương tác qua qua Consolve
+	static final String HOST = "127.0.0.1";
+	static final int PORT = 12345;
+	private String clientDir;
+
+	public Client() {
+		clientDir = "C:\\source";
+	}
+
+	// mở kết nối bên client và tiến hành xử lí
+	public void request() throws UnknownHostException, IOException {
+
+		this.socket = new Socket(HOST, PORT);
+		dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+		dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+		userIn = new BufferedReader(new InputStreamReader(System.in)); // đọc client nhập vào
+		// vòng lặp vô tận để nhập của người dùng
+		while (true) {
+			// đọc lệnh từ người dùng nhập
+			String line = userIn.readLine();
+			StringTokenizer token = new StringTokenizer(line); // không để \t mặc định là 5 kí tự đăc biệt: \t \n \...
+			String action = token.nextToken();
+			switch (action) {
+			case "SET_SERVER_DIR":
+
+				break;
+			case "SET_CLIENT_DIR":
+
+				break;
+			case "SEND":
+
+				break;
+			case "GET":
+
+				break;
+			default:
+				break;
+			}
+
+			if (action.equalsIgnoreCase("QUIT"))
+				break;
+
+		}
+		dis.close();
+		dos.flush();
+		dos.close();
+		userIn.close();
+		socket.close();
+	}
+}

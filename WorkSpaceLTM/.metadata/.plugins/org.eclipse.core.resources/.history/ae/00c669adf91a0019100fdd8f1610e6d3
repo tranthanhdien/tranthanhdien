@@ -1,0 +1,74 @@
+package De1;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.util.StringTokenizer;
+
+public class FileServerProcess extends Thread {
+	private Socket socket;
+	private DataInputStream dis;
+	private DataOutputStream dos;
+	private String serverDir;
+
+	public FileServerProcess(Socket socket) throws IOException {
+		this.socket = socket;
+		dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+		dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+		
+		
+	}
+	public void run() {
+		String line;
+		while (true) {
+			// đọc lệnh từ Client
+			line = dis.readUTF();
+			StringTokenizer token = new StringTokenizer(line); // không để \t mặc định là 5 kí tự đăc biệt: \t \n \...
+			String action = token.nextToken();
+			String sf, df;
+			switch (action) {
+			case "SET_SERVER_DIR":
+				// lệnh này phải được server xử lí
+				dos.writeUTF(line);
+				break;
+			case "SET_CLIENT_DIR":
+				serverDir = token.nextToken();
+				break;
+			case "SEND":
+				// send từ file nguồn tới file đích
+				// gửi lên server: SEND df
+				sf = token.nextToken();
+				df = token.nextToken();
+				dos.writeUTF(action + " " + df);
+				sendFile(sf);
+				break;
+			case "GET":
+				// gửi lên server: GET sf
+				sf = token.nextToken();
+				df = token.nextToken();
+				dos.writeUTF(action + " " + sf);
+				receiveFile(df);
+				break;
+			case "QUIT":
+				// lệnh này báo cho server biết kết thúc vòng lặp
+				dos.writeUTF(line);
+				break;
+			
+		}
+	}
+		
+
+}
+	private void sendFile(String sf) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void receiveFile(String df) {
+		// TODO Auto-generated method stub
+		
+	}

@@ -1,0 +1,139 @@
+package ttdien.rmi;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+
+import ttdien.rmi.file.IFile;
+
+public class FileClient {
+	BufferedReader userIn;
+	boolean isLogin;
+
+	public void start() throws NotBoundException, IOException {
+		Registry re = LocateRegistry.getRegistry("127.0.0.1", 1212);
+		IFile file = (IFile) re.lookup("test");
+		System.out.println("WELCOME TO MANAGE PRODUCT SYSTEM");
+		userIn = new BufferedReader(new InputStreamReader(System.in)); // đọc từ người dùng
+		String line;
+		StringTokenizer token;
+		while (true) {
+			try {
+				line = userIn.readLine();
+				if (line.equalsIgnoreCase("EXIT"))
+					break;
+				if (!isLogin) {
+
+					token = new StringTokenizer(line);
+					String action = token.nextToken();
+					switch (action) {
+					case "USER":
+						try {
+							String name = token.nextToken();
+							if (file.checkName(name)) {
+								System.out.println("OK");
+							} else {
+								System.out.println("False");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "PASS":
+						try {
+							String pass = token.nextToken();
+							if (file.checkPass(pass)) {
+								System.out.println("OK");
+								isLogin = true;
+							} else {
+								System.out.println("False");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+
+					default:
+						break;
+					}
+				} else {
+					// đã đăng nhập
+
+					token = new StringTokenizer(line);
+					String action = token.nextToken();
+					switch (action) {
+					case "ADD":
+						try {
+							String id = token.nextToken();
+							String name = token.nextToken();
+							int count = Integer.parseInt(token.nextToken());
+							double price = Double.parseDouble(token.nextToken());
+							if (file.add(id, name, count, price)) {
+								System.out.println("OK");
+							} else {
+								System.out.println("Error");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "REMOVE":
+						try {
+							String id = token.nextToken();
+							if (file.remove(id)) {
+								System.out.println("Xoá thành công");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "EDIT":
+						try {
+							String id = token.nextToken();
+							String name = token.nextToken();
+							int count = Integer.parseInt(token.nextToken());
+							double price = Double.parseDouble(token.nextToken());
+							if (file.edit(id, name, count, price)) {
+								System.out.println("OK");
+							} else {
+								System.out.println("CAN NOT UPDATE");
+							}
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "VIEW":
+						try {
+							String name = token.nextToken();
+							file.find(name);
+							System.out.println("Danh sách sản phẩm vừa tìm:\n" );
+
+						} catch (NoSuchElementException e) {
+							System.out.println("Nhập k đúng định dạng, thiếu dữ liệu...");
+						}
+						break;
+					case "QUIT":
+						break;
+
+					}
+				}
+
+			} catch (RemoteException e) {
+				System.out.println(e.getMessage());
+			}
+
+		}
+		userIn.close();
+	}
+
+	public static void main(String[] args) throws NotBoundException, IOException {
+		FileClient client = new FileClient();
+		client.start();
+	}
+}

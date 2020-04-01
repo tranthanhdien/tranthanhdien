@@ -1,0 +1,19 @@
+package ttdien.rmi;
+
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import ttdien.rmi.file.IFile;
+
+public class FileClient {
+	public void start() throws RemoteException, NotBoundException {
+		Registry re = LocateRegistry.getRegistry("127.0.0.1", 1212);
+		IFile file = (IFile) re.lookup("test");
+		System.out.println("WELCOME TO MANAGE PRODUCT SYSTEM");
+	}
+	public static void main(String[] args) {
+		FileClient client = new FileClient();
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;RMI_Upload&apos; to &apos;RMI_UploadClient&apos;&#x0D;&#x0A;- Original element: &apos;RMI_Upload&apos;&#x0D;&#x0A;- Renamed element: &apos;RMI_Upload&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;RMI_Upload&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=RMI_Upload" name="RMI_UploadClient" references="true" stamp="1548237003289" version="1.0"/>
+</session>

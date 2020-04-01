@@ -1,0 +1,7 @@
+
+public interface IDownload {
+	// download từ Server về Client
+	// b1: mở source trên Server ra
+	public void 
+
+}

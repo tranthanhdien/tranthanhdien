@@ -1,0 +1,66 @@
+package ttdien.rmi.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class Data {
+	public static void getConnection() {
+		try {
+			String csdl = "csdl/csdl.accdb";
+			String url = "jdbc:ucanaccess://" + csdl;
+			Connection conn = DriverManager.getConnection(url);
+			if (conn!=null) {
+				System.out.println("Kết nối thành công");
+			} else {
+				System.out.println("Kết nối thất bại");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public static ArrayList<User> createListUser() {
+		ArrayList<User> list = new ArrayList<>();
+		try {
+			String csdl = "csdl/csdl.accdb";
+			String url = "jdbc:ucanaccess://" + csdl;
+			String sql = "SELECT * FROM User";
+			Connection conn = DriverManager.getConnection(url);
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery(sql);
+			while (rs.next()) {
+				list.add(new User(rs.getString(1), rs.getString(2)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+		
+	}
+	public static ArrayList<Product> createListProduct() {
+		ArrayList<Product> list = new ArrayList<>();
+		try {
+			String csdl = "csdl/csdl.accdb";
+			String url = "jdbc:ucanaccess://" + csdl;
+			String sql = "SELECT * FROM Product";
+			Connection conn = DriverManager.getConnection(url);
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery(sql);
+			while (rs.next()) {
+				list.add(new Product(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getDouble(4)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+		
+	}
+	public static void main(String[] args) {
+	//	System.out.println(Data.createListUser());
+		System.out.println(Data.getConnection(););
+	}
+
+}

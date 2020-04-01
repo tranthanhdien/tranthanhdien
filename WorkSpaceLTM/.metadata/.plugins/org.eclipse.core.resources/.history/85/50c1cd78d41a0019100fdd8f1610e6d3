@@ -1,0 +1,12 @@
+package De1;
+
+import java.net.Socket;
+
+public class FileServerProcess extends Thread {
+	private Socket socket;
+
+	public FileServerProcess(Socket socket) {
+		this.socket = socket;
+	}
+
+}
