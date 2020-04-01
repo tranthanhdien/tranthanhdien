@@ -1,0 +1,14 @@
+package com.java.core;
+
+public class TestJavaCore {
+	public static void main(String[] args) {
+		int arr1[][] = new int[5][5];
+		int[][] arr2 = new int[5][5];
+		int []arr3[] = new int[5][5];
+		String s = "Hello I'm Java";
+		s=s.substring(2, 4);
+		System.out.println(s);
+		
+	}
+
+}
