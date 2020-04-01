@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;src&apos; in &apos;Week10.UnGraph.bellman_Ford(...)&apos; to &apos;start&apos;&#x0D;&#x0A;- Original project: &apos;16130326_TranThanhDien&apos;&#x0D;&#x0A;- Original element: &apos;Week10.UnGraph.bellman_Ford(int).src&apos;&#x0D;&#x0A;- Renamed element: &apos;src&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;src&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;Week10{UnGraph.java[UnGraph~bellman_Ford~I@src!34322!34328!34326!34328!I!0!true" name="start" references="true" stamp="1558933597059" version="1.0"/>
-</session>
