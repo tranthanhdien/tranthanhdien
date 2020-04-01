@@ -1,0 +1,17 @@
+1559004331345	Rename package 'Model'
+1559022651159	Delete element
+1559022654087	Delete element
+1559024345370	Rename field 'btnNew'
+1559024773039	Rename field 'btnPlay'
+1559024816328	Rename local variable 'pnlOptions'
+1559025065925	Rename field 'btnGenerate'
+1559025094719	Rename local variable 'pnlAlign'
+1559025190003	Rename local variable 'pnOption2'
+1559319312364	Delete element
+1559319331309	Delete elements
+1559319839748	Rename field 'btnNew'
+1559319892645	Rename field 'btnCheck'
+1559319907999	Rename field 'btnExit'
+1559319981773	Rename enum constant 'NEW_GAME'
+1559319992076	Rename enum constant 'CHECK'
+1559320000686	Rename enum constant 'SELECTED_NUMBER'
