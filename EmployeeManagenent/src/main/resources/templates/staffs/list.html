@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{Layouts/admin.html}">
+<head>
+<meta charset="ISO-8859-1">
+<title>List Staffs</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="/fontawesome-free-5.13.0-web/css/all.min.css">
+<style>
+.form-control {
+	width: 200px;;
+}
+
+#khung {
+	border: 1px solid #cccccc;
+	margin-left: 5%;
+	width: 100%;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 100%;
+	margin-left: 10%;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body>
+	<!-- Hiển thị vào phần nội dung của trang web -->
+	<div layout:fragment="content">
+		<div class="container">
+			<div class="card">
+				<!-- Card Header -->
+				<div class="card-header">
+					<i class="fas fa-table mr-1"> Staffs List</i>
+				</div>
+				<!-- // Card Header -->
+
+				<!-- Card Body -->
+				<div class="card-body">
+					<!-- Form here, action chính là tên phương thức sau khi submit sẽ gửi qua controller thực hiện, tìm kiếm ==> GET-->
+					<h2 style="text-align: center;">Staffs List</h2>
+					<form class="navbar-form" th:action="@{/staffs/find}" method="get">
+						<div class="input-group add-on">
+							<input class="form-control"
+								placeholder="Nhập giá trị tìm kiếm..." name="name"
+								id="srch-term" type="text" size="50" autofocus>
+							<div class="input-group-btn">
+								<button class="btn btn-primary" type="submit">
+									<i class="fas fa-search"></i>&nbsp;Tìm kiếm
+								</button>
+								<a th:href="@{/staffs/add}"><button class="btn btn-primary"
+										type="button">
+										<i class="fas fa-plus"></i>&nbsp;Thêm mới
+									</button></a>
+
+								<button type="button" class="btn btn-primary" id='btn'
+									onclick='printFunc();'>
+									<i class="fas fa-print"></i>&nbsp;Print
+								</button>
+							</div>
+						</div>
+					</form>
+					<br>
+					<!-- // Form here -->
+
+					<div class="table-reponsive">
+						<table class="table table-bordered table-hover" id="dataTable">
+							<thead>
+								<!-- Row 1 (bao gồm 3 cột) -->
+								<tr>
+									<th>Staff ID</th>
+									<th>Name</th>
+									<th>Birthday</th>
+									<th>Image</th>
+									<th>Department ID</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Row 2 (lấy data hiển thị lên) -->
+								<!-- Biến "staffs được lấy bên phương thức list qua" -->
+								<tr th:each="item : ${staffs}">
+									<td th:text="${item.id}"></td>
+									<td th:text="${item.name}"></td>
+									<td th:text="${item.birthday}"></td>
+									<!-- <td th:text="${item.photo}"></td> -->
+									<!-- getimage: là đường dẫn bên ImageController để đọc ảnh -->
+									<td><img th:src="@{'/getimage/' + ${item.id}}"
+										th:alt="${item.photo}" width="50" , height="50"></td>
+									<td th:text="${item.depart.name}"></td>
+									<td><a href="#"><button type="button"
+												class="btn btn-info">
+												<i class="fa fa-exclamation-circle"></i> Info
+											</button></a> | <a th:href="@{'/staffs/edit/' + ${item.id}}"><button
+												type="button" class="btn btn-primary">
+												<span class="fas fa-edit"></span> Edit
+											</button></a> | <a th:href="@{'/staffs/delete/' + ${item.id}}"><button
+												type="button" class="btn btn-danger">
+												<span class="fa fa-times-circle"></span> Delete
+											</button></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						<!-- Pagination here -->
+						<div style="margin-left: 35%; font-size: 20px">
+							<ul class="nav nav-pills">
+								<li class="nav-item"
+									th:each="i : ${#numbers.sequence(0, staffs.totalPages-1)}">
+									<a class="nav-link" th:href="@{/staffs/list/(page=${i})}"
+									th:text="${i}"
+									th:classappend="${currentPage}==${i}?'active':''"></a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Script phải để bên dưới -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</body>
+</html>

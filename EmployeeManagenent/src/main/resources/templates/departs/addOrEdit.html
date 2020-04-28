@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Or Update</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="/fontawesome-free-5.13.0-web/css/all.min.css">
+<style>
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 50%;
+	margin-left: 25%;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<br> <br>
+		<!-- Sau khi nhấn Submit nó sẽ gửi data lên pthuc "departs/saveOrUpdate" để xử lý -->
+		<form th:action="@{/departs/saveOrUpdate}" method="post"
+			th:object="${depart}">
+			<!-- Add or Edit (Thêm mới thì ân trường id, edit thì hiện id) -->
+			<div class="card">
+				<!-- Header here -->
+				<div class="card-header">
+					<div th:if="${id<0}">
+						<i class="fas fa-plus"> THÊM PHÒNG BAN</i>
+					</div>
+					<div th:if="${id>0}">
+						<i class="fas fa-edit"> CẬP NHẬT THÔNG TIN PHÒNG BAN</i>
+					</div>
+				</div>
+				<!-- // Header here -->
+
+				<!-- Body here -->
+				<div class="card-body">
+					<div class="row">
+						<!-- Row1, col1 -->
+						<!-- Mỗi hàng (row) chia thành 2 cột (6-6)-->
+						<div class="form-group col-6">
+							<div th:if="${id<0}">
+								<label for="">Mã Phòng Ban</label> <input type="text" disabled
+									th:field="*{id}" class="form-control"
+									placeholder="Mã phòng ban"> <small
+									class="form-text text-muted"> Mã phòng ban tự động tăng</small><br>
+							</div>
+							<div th:if="${id>0}">
+								<label for="">Mã Phòng Ban</label> <input type="text" disabled
+									th:field="*{id}" class="form-control"
+									placeholder="Mã phòng ban"> <small
+									class="form-text text-muted"> Mã phòng ban không được
+									sửa</small><br>
+							</div>
+						</div>
+						<!-- Row 1, col 2 -->
+						<div class="form-group col-6">
+							<label for="">Tên Phòng Ban</label> <input type="text"
+								th:field="*{name}" class="form-control"
+								placeholder="Tên phòng ban"> <small
+								class="form-text text-muted"> Tên phòng ban không được
+								để trống</small>
+						</div>
+					</div>
+				</div>
+				<!-- // Body here -->
+
+				<!-- Footer here -->
+				<div class="card-footer">
+					<div class="form-group col text-center">
+						<!-- Nếu id <=0 ==> hiển thị nút Save -->
+						<button type="submit" class="btn btn-primary" th:if="${id<=0}">
+							<i class="fas fa-save"> Save</i>
+						</button>
+						<!-- Nếu id >=0 ==> hiển thị nút Edit -->
+						<button type="submit" class="btn btn-primary" th:if="${id>=0}">
+							<i class="fas fa-save"> Update</i>
+						</button>
+						|
+						<!-- Tạo mới department -->
+						<a th:href="@{/departs/add}" class="btn btn-danger"><i
+							class="fas fa-plus"> Add New </i></a> |
+						<!-- Xem list department -->
+						<a th:href="@{/departs/list}" class="btn btn-primary"><i
+							class="fas fa-list"> List Departments </i></a>
+					</div>
+				</div>
+				<!-- // Footer here -->
+			</div>
+		</form>
+		<!-- // Form here -->
+	</div>
+	<!-- Thông báo addOrEdit thành công or thất bại, biến message lấy từ pthuc saveOrUpdate bên Controller qua -->
+	<div th:if="${message!=null}" style="text-align: center; color: red">
+		<h3 th:text="${message}"></h3>
+	</div>
+</body>
+</html>
