@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008EFF</color>
+    <color name="colorPrimaryDark">#0f82d2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="stepByStep1">#00c6ff</color>
+    <color name="stepByStep2">#0072ff</color>
+</resources>
