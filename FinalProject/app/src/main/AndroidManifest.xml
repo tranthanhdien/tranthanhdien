@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VoiceActivity"></activity>
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".GuideActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".StartActivity">
+        <activity android:name=".activity.VoiceActivity"></activity>
+        <activity android:name=".activity.HistoryActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.GuideActivity" />
+        <activity android:name=".activity.ResultActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

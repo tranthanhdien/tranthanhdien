@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">NLUMath</string>
+    <string name="app_name">Thesis2020</string>
+
+    <string name="success_title">Thông báo thành công!</string>
+    <string name="error_title">Thông báo lỗi!</string>
+    <string name="dummy_text_success">Nhận dạng thành công. Kết quả được hiển thị bên dưới.</string>
+    <string name="dummy_text_error">Nhận dạng chưa chính xác, vui lòng thử lại.</string>
+    <string name="okay">Okay</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

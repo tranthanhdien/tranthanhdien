@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <!-- actionViewClass: cho phép khi nhấn vào icon search sẽ hiện ra EditText -->
     <item
         android:id="@+id/mnuSearch"
         android:icon="@drawable/ic_search"
         android:title="Tìm kiếm"
-        app:showAsAction="always">
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView">
 
     </item>
-    <item
-        android:id="@+id/mnuDelete"
-        android:icon="@drawable/ic_delete"
-        android:title="Xóa"
-        app:showAsAction="always">
+<!--    <item-->
+<!--        android:id="@+id/mnuDelete"-->
+<!--        android:icon="@drawable/ic_delete"-->
+<!--        android:title="Xóa"-->
+<!--        app:showAsAction="always">-->
 
-    </item>
+<!--    </item>-->
 
 </menu>
