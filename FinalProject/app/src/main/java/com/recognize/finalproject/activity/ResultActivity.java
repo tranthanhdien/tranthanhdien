@@ -64,26 +64,29 @@ public class ResultActivity extends AppCompatActivity {
     // Đọc kết quả
     TextToSpeech textToSpeech;
     // Image đã crops
-    ImageView imgViewShow;
+    ImageView imgViewShow, imgEditOriginal;
     EditText edtOriginal, edtResult;
     Toolbar toolBarResult;
-    Button btnSolveDetail;
+    Button btnGraph, btnSolveDetail;
     Bitmap grayBitmap, imageBitmap, newBitmap;
     // Biến Uri hình ảnh đã crop
     Uri imageCroppedURI;
     // Biến để lưu kết quả
     double result = 0;
+    // Bài toán ban đầu (bao gồm hình ảnh đã crop và giọng nói) gửi qua
+    String originalData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        if(OpenCVLoader.initDebug()){
-                //Log.d("", "OpenCV 3.4.3 loaded");
-                Toast.makeText(ResultActivity.this, "OpenCV 3.4.7 loaded", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(ResultActivity.this, "OpenCV 3.4.7 not loaded", Toast.LENGTH_LONG).show();
-            }
+        if (OpenCVLoader.initDebug()) {
+            Log.d("", "OpenCV 3.4.3 loaded");
+            //Toast.makeText(ResultActivity.this, "OpenCV 3.4.7 loaded", Toast.LENGTH_LONG).show();
+        } else {
+            Log.d("", "OpenCV 3.4.3 is not loaded");
+            //Toast.makeText(ResultActivity.this, "OpenCV 3.4.7 not loaded", Toast.LENGTH_LONG).show();
+        }
 
         getSupportActionBar().hide(); // ẩn thanh ActionBar đi
         // Phải để databaseHelper lên trước, không sẽ bị lỗi ngay
@@ -134,14 +137,14 @@ public class ResultActivity extends AppCompatActivity {
                     }
                     // set text to edit text
                     edtOriginal.setText(sb.toString());
-                    final String original = sb.toString().trim(); // Phải có trim(), nếu ko chắc chắn báo lỗi
+                    originalData = sb.toString().trim(); // Phải có trim(), nếu ko chắc chắn báo lỗi
                     try {
-                        result = eval(original);
+                        result = eval(originalData);
                         edtResult.setText("Kết quả: " + result);
                         edtResult.setEnabled(false);
                         edtResult.setTextColor(Color.RED);
                         // Lưu vào lịch sử
-                        addData(original, getDateTime());
+                        addData(originalData, getDateTime());
                         // đọc kết quả lên
                         textToSpeech = new TextToSpeech(ResultActivity.this, new TextToSpeech.OnInitListener() {
                             @Override
@@ -220,43 +223,58 @@ public class ResultActivity extends AppCompatActivity {
                 final ArrayList<String> resultVoice = intent.getStringArrayListExtra("listVoice");
                 imgViewShow.setImageResource(R.drawable.reg_voice);
                 edtOriginal.setText(resultVoice.get(0));
-                // Test thử cho pt bậc 1: Ax + b = 0
+                // Test thử cho pt bậc 1: A x + b = 0
                 int length = resultVoice.get(0).length();
-                if (length == 11) {
-                    double x = 0;
-                    int a = resultVoice.get(0).charAt(0);
-                    int b = resultVoice.get(0).charAt(6);
-                    x = (-b / a);
-                    edtResult.setText("Kết quả: x = " + x);
-                    edtResult.setEnabled(false);
-                    edtResult.setTextColor(Color.RED);
-                    // Lưu vào lịch sử
-                    addData(resultVoice.get(0), getDateTime());
-                    // Show success dialog
-                    AlertDialog.Builder builder = new AlertDialog.Builder(ResultActivity.this, R.style.AlertDialogTheme);
-                    View view = LayoutInflater.from(ResultActivity.this).inflate(R.layout.layout_success_dialog,
-                            (ConstraintLayout) findViewById(R.id.layoutDialogContainer));
-                    builder.setView(view);
-                    ((TextView) view.findViewById(R.id.textTitle)).setText(getResources().getString(R.string.success_title));
-                    ((TextView) view.findViewById(R.id.textMesage)).setText(getResources().getString(R.string.dummy_text_success));
-                    ((Button) view.findViewById(R.id.buttonAction)).setText(getResources().getString(R.string.okay));
-                    ((ImageView) view.findViewById(R.id.imageIcon)).setImageResource(R.drawable.ic_success);
-                    final AlertDialog alertDialog = builder.create();
-                    view.findViewById(R.id.buttonAction).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            alertDialog.dismiss();
-                        }
-                    });
-                    if (alertDialog.getWindow() != null) {
-                        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
-                    }
-                    alertDialog.show();
-                } else {
-                    try {
-                        result = eval(resultVoice.get(0));
-                        edtResult.setText("Kết quả: " + result);
+                Toast.makeText(ResultActivity.this, "Length: " + length, Toast.LENGTH_LONG).show();
+                if (length == 10 || length == 11 || length == 12) {
+                    originalData = resultVoice.get(0);
+                    // nếu là pt: y = ax + b thì không giải, chỉ vẽ đồ thị
+                    if (originalData.charAt(0) == 'y') {
+
+                        return;
+                    } else {
+                        // ngược lại là pt: ax + b = 0 thì giải
+                        double x = 0;
+                        char a = originalData.charAt(0);
+                        char b = originalData.charAt(6);
+                        int heSoA = Integer.parseInt(String.valueOf(a));
+                        int heSoB = Integer.parseInt(String.valueOf(b));
+                        //Toast.makeText(ResultActivity.this, b, Toast.LENGTH_LONG).show();
+                        x = (-b / a);
+                        edtResult.setText("Kết quả: x = " + x);
                         edtResult.setEnabled(false);
+                        edtResult.setTextColor(Color.RED);
+                        // Lưu vào lịch sử
+                        addData(resultVoice.get(0), getDateTime());
+                        // Show success dialog
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ResultActivity.this, R.style.AlertDialogTheme);
+                        View view = LayoutInflater.from(ResultActivity.this).inflate(R.layout.layout_success_dialog,
+                                (ConstraintLayout) findViewById(R.id.layoutDialogContainer));
+                        builder.setView(view);
+                        ((TextView) view.findViewById(R.id.textTitle)).setText(getResources().getString(R.string.success_title));
+                        ((TextView) view.findViewById(R.id.textMesage)).setText(getResources().getString(R.string.dummy_text_success));
+                        ((Button) view.findViewById(R.id.buttonAction)).setText(getResources().getString(R.string.okay));
+                        ((ImageView) view.findViewById(R.id.imageIcon)).setImageResource(R.drawable.ic_success);
+                        final AlertDialog alertDialog = builder.create();
+                        view.findViewById(R.id.buttonAction).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                alertDialog.dismiss();
+                            }
+                        });
+                        if (alertDialog.getWindow() != null) {
+                            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+                        }
+                        alertDialog.show();
+                    }
+                }
+                // ngược lại không phải pt: y = ax +- b
+                else {
+                    try {
+                        originalData = resultVoice.get(0);
+                        result = eval(originalData);
+                        edtResult.setText("Kết quả: " + result);
+                        //edtResult.setEnabled(false);
                         edtResult.setTextColor(Color.RED);
                         // Lưu vào lịch sử
                         addData(resultVoice.get(0), getDateTime());
@@ -332,6 +350,23 @@ public class ResultActivity extends AppCompatActivity {
                 }
             }
         }
+        // Phần History: lấy data bên HistoryActivity gửi qua
+        if (intent != null) {
+            if (intent.hasExtra("dataHistory")) {
+                originalData = intent.getStringExtra("dataHistory");
+                imgViewShow.setImageResource(R.drawable.reg_voice);
+                edtOriginal.setText(originalData);
+                try {
+                    result = eval(originalData);
+                    edtResult.setText("Kết quả: " + result);
+                    edtResult.setEnabled(false);
+                    edtResult.setTextColor(Color.RED);
+                } catch (Exception e) {
+                    Toast.makeText(ResultActivity.this, "Lỗi", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+
     }
 
     // Xử lý ảnh trước khi đưa vào nhận dạng
@@ -372,6 +407,23 @@ public class ResultActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        // cho phép sửa lại biểu thức nếu chưa chính xác
+        imgEditOriginal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                originalData = edtOriginal.getText().toString();
+                try {
+                    result = eval(originalData);
+                    edtResult.setText("Kết quả: " + result);
+                    edtResult.setTextColor(Color.RED);
+                    edtResult.setEnabled(false);
+                } catch (Exception e) {
+                    Log.d("Lỗi", e.getMessage());
+                }
+                Toast.makeText(ResultActivity.this, "Sửa thành công", Toast.LENGTH_LONG).show();
+            }
+        });
         imgViewShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -379,11 +431,28 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
 
+
         // sự kiện khi nhấn nút xem chi tiết
         btnSolveDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ResultActivity.this, "Đang cập nhật...", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        // sự kiện khi nhấn nút xem đồ thị
+        btnGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // nếu là phương trình bậc 1 có dạng: y = ax + b thì mới hỗ trợ đồ thị
+                if (originalData.charAt(0) == 'y') {
+                    Intent intent = new Intent(ResultActivity.this, GraphViewActivity.class);
+                    // gửi dữ liệu bài toán qua GraphActivity
+                    intent.putExtra("graph", originalData);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ResultActivity.this, "Không hỗ trợ đồ thị", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -394,8 +463,10 @@ public class ResultActivity extends AppCompatActivity {
         toolBarResult.setTitle("Kết quả + Hướng dẫn");
 
         imgViewShow = (ImageView) findViewById(R.id.imgViewShow);
+        imgEditOriginal = (ImageView) findViewById(R.id.imgEditOriginal);
         edtOriginal = (EditText) findViewById(R.id.edtOriginal);
         edtResult = (EditText) findViewById(R.id.edtResult);
+        btnGraph = (Button) findViewById(R.id.btnGraph);
         btnSolveDetail = (Button) findViewById(R.id.btnSolveDetail);
     }
 

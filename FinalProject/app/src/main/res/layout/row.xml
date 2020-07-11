@@ -17,15 +17,15 @@
 
         <ImageView
             android:id="@+id/imgViewHistory"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/hand_icon"
             android:layout_width="55dp"
             android:layout_height="55dp"
             ></ImageView>
         <TextView
             android:id="@+id/txtTitle"
             android:text="Title"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="19sp"
+
             android:textColor="#040400"
             android:layout_toRightOf="@id/imgViewHistory"
             android:layout_toEndOf="@id/imgViewHistory"

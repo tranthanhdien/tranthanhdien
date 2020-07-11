@@ -102,11 +102,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Xóa dựa vào id
-    public void deleteById(int id) {
+    public void deleteByName(String name) {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
-                + ID + " = '" + id + "'";
+                + NAME + " = '" + name + "'";
         Log.d(TAG, "deleteName: query: " + query);
+        db.execSQL(query);
+    }
+    // Xóa dựa vào id
+    public void searchByName(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE "
+                + NAME + " = '" + name + "'";
+        Log.d(TAG, "Select: query: " + query);
         db.execSQL(query);
     }
 
