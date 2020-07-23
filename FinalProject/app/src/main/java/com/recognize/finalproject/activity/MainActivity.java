@@ -1,10 +1,13 @@
 package com.recognize.finalproject.activity;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -22,6 +26,7 @@ import androidx.core.content.ContextCompat;
 
 import com.recognize.finalproject.R;
 import com.recognize.finalproject.dao.DatabaseHelper;
+import com.shashank.sony.fancytoastlib.FancyToast;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -89,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // đổi màu cho CardView khi click vào
                 // cardViewCamera.setCardBackgroundColor(Color.parseColor("#FF6F00"));
-                Toast.makeText(MainActivity.this, "Camera", Toast.LENGTH_LONG).show();
+                FancyToast.makeText(MainActivity.this, "Camera", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (!checkCameraPermission()) {
                         // camera permission not allowed, request it
@@ -115,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // cardViewGallery.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
                 // Toast.makeText(MainActivity.this, "State : False", Toast.LENGTH_SHORT).show();
-                Toast.makeText(MainActivity.this, "Bộ sưu tập", Toast.LENGTH_LONG).show();
+                FancyToast.makeText(MainActivity.this, "Bộ sưu tập", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     // gallery options clicked
                     if (!checkStoragePermission()) {
@@ -145,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Lịch sử", Toast.LENGTH_LONG).show();
+                FancyToast.makeText(MainActivity.this, "Lịch sử", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
                 Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
             }
@@ -155,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewIntro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Hướng dẫn", Toast.LENGTH_LONG).show();
+                FancyToast.makeText(MainActivity.this, "Hướng dẫn", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
                 Intent intent = new Intent(MainActivity.this, GuideActivity.class);
                 startActivity(intent);
             }
@@ -165,9 +170,17 @@ public class MainActivity extends AppCompatActivity {
         cardViewAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Thông tin chi tiết app", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
+                final Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.layout_about_dialog);
+                TextView txtClose = dialog.findViewById(R.id.txtClose);
+                txtClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
     }
@@ -176,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
     private void speak() {
         // Intent to show speech to text dialog
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hi, speak something");
 

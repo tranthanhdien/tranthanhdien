@@ -20,7 +20,6 @@
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:layout_height="?attr/actionBarSize">
-
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.cardview.widget.CardView
@@ -31,16 +30,17 @@
             android:layout_marginBottom="10dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="25dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imgViewShow"
                 android:clickable="true"
+                android:textAlignment="center"
                 android:layout_marginLeft="-3.5dp"
-                android:layout_width="380dp"
+                android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 ></ImageView>
         </androidx.cardview.widget.CardView>
 
@@ -63,7 +63,7 @@
 
                 <TextView
                     android:textSize="20sp"
-                    android:text="Original"
+                    android:text="Bài toán ban đầu"
                     android:textColor="#2196F3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
@@ -80,9 +80,20 @@
                     <EditText
                         android:id="@+id/edtOriginal"
                         android:background="@null"
+                        android:enabled="true"
                         android:hint="Original data"
-                        android:layout_width="match_parent"
+                        android:layout_width="340dp"
                         android:layout_height="wrap_content"></EditText>
+<!--                    <io.github.kexanie.library.MathView-->
+<!--                        android:layout_below="@id/edtOriginal"-->
+<!--                        android:id="@+id/formula_one"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:text="When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\)-->
+<!--                        and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"-->
+<!--                        app:engine="MathJax"-->
+<!--                        >-->
+<!--                    </io.github.kexanie.library.MathView>-->
                     <ImageView
                         android:src="@drawable/ic_check"
                         android:layout_alignParentEnd="true"
@@ -111,7 +122,7 @@
 
                 <TextView
                     android:textSize="20sp"
-                    android:text="Result"
+                    android:text="Kết quả"
                     android:textColor="#2196F3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
@@ -124,45 +135,53 @@
                     android:layout_height="wrap_content"></EditText>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
+        <RelativeLayout
+            android:padding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/btnGraph"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/step_by_step_custom"
-                android:drawableLeft="@drawable/ic_graph"
+                android:background="@drawable/button_graph"
+                android:drawableRight="@drawable/ic_graph"
                 android:fontFamily="@font/architects_daughter"
-                android:paddingHorizontal="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="13dp"
                 android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="2dp"
                 android:clickable="true"
                 android:text="Đồ thị"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"></Button>
             <Button
                 android:id="@+id/btnSolveDetail"
-                android:layout_width="160dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="2dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/step_by_step_custom"
-                android:drawableLeft="@drawable/ic_down"
+                android:drawableRight="@drawable/ic_next"
                 android:fontFamily="@font/architects_daughter"
                 android:paddingHorizontal="7dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:paddingVertical="10dp"
+                android:paddingVertical="13dp"
                 android:textStyle="bold"
                 android:clickable="true"
-                android:text="Xem chi tiết"
+                android:text="Các bước giải"
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"></Button>
 
-        </LinearLayout>
+        </RelativeLayout>
+<!--        <Button-->
+<!--            android:id="@+id/btnTestGraph"-->
+<!--            android:text="Demo đồ thị"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"></Button>-->
     </LinearLayout>
 </ScrollView>

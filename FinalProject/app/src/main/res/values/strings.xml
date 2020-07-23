@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Thesis2020</string>
 
+    <!-- Phần custom dialog thông báo kết quả -->
     <string name="success_title">Thông báo thành công!</string>
     <string name="error_title">Thông báo lỗi!</string>
     <string name="dummy_text_success">Nhận dạng thành công. Kết quả được hiển thị bên dưới.</string>
@@ -8,4 +9,36 @@
     <string name="okay">Okay</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <!-- Phần này cho ExpandableListView, chi tiết giải -->
+    <string name="group1">Bước 1</string>
+    <string name="group2">Bước 2</string>
+    <string name="group3">Bước 3</string>
+    <string name="group4">Bước 4</string>
+    <string name="group5">Bước 5</string>
+
+    <string-array name="group1">
+        <item>item1</item>
+    </string-array>
+    <string-array name="group2">
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+    <string-array name="group3">
+        <item>item5</item>
+        <item>item6</item>
+    </string-array>
+    <string-array name="group4">
+        <item>item7</item>
+    </string-array>
+    <string-array name="group5">
+        <item>item8</item>
+        <item>item9</item>
+        <item>item10</item>
+        <item>item11</item>
+        <item>item12</item>
+
+    </string-array>
+
 </resources>

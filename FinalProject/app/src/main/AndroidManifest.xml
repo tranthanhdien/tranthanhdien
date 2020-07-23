@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.GraphViewActivity"></activity>
+        <activity android:name=".activity.GraphLibActivity"></activity>
+        <activity android:name=".activity.SolveDetailActivity" />
+        <activity android:name=".activity.TestGraphActivity" />
+        <activity android:name=".activity.GraphViewActivity" />
         <activity android:name=".activity.VoiceActivity" />
         <activity android:name=".activity.HistoryActivity" />
         <activity android:name=".activity.AboutActivity" />
@@ -31,14 +34,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
     <uses-feature
         android:name="android.hardware.camera2"
         android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

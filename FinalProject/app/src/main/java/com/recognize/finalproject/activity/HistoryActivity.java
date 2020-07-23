@@ -8,20 +8,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.recognize.finalproject.R;
-import com.recognize.finalproject.adapter.TestAdapter;
+import com.recognize.finalproject.adapter.HistoryAdapter;
 import com.recognize.finalproject.dao.DatabaseHelper;
 import com.recognize.finalproject.model.Model;
 
@@ -33,12 +32,14 @@ public class HistoryActivity extends AppCompatActivity {
     DatabaseHelper databaseHelper;
     Toolbar toolbarHistory;
     RecyclerView recyclerView;
-    TestAdapter myAdapter;
+    HistoryAdapter myAdapter;
     CheckBox chkSelectAll;
     TextView txtNoData;
 
-    // List data lịch sử
+    // List toàn bộ data lịch sử
     ArrayList<Model> listData;
+    // list data được search
+    ArrayList<Model> models;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,19 +49,23 @@ public class HistoryActivity extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(HistoryActivity.this);
 
         // ẩn thanh ActionBar đi
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Lịch sử tìm kiếm");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_back);
 
-        // ánh xạ
-        toolbarHistory = (Toolbar) findViewById(R.id.toolBarHistory);
-        // Chú ý phải để như thế này nếu không menu sẽ không hiển thị (Quan trọng)
-        toolbarHistory.inflateMenu(R.menu.menu_history);
+
+//        // ánh xạ
+//        toolbarHistory = (Toolbar) findViewById(R.id.toolBarHistory);
+//        // Chú ý phải để như thế này nếu không menu sẽ không hiển thị (Quan trọng)
+//        toolbarHistory.inflateMenu(R.menu.menu_history);
 
         txtNoData = (TextView) findViewById(R.id.txtNoData);
         chkSelectAll = (CheckBox) findViewById(R.id.chkSelectAll);
         recyclerView = (RecyclerView) findViewById(R.id.recycleViewHistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(HistoryActivity.this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        myAdapter = new TestAdapter(HistoryActivity.this, getMyListData());
+        myAdapter = new HistoryAdapter(HistoryActivity.this, getMyListData());
         recyclerView.setAdapter(myAdapter);
 
         // populateListView();
@@ -73,7 +78,6 @@ public class HistoryActivity extends AppCompatActivity {
         Cursor data = databaseHelper.getData();
         listData = new ArrayList<Model>();
         // Tạm thời set dữ liệu mặc định cho hình ảnh
-        Model model = new Model();
         while (data.moveToNext()) {
 //            model.setImg(R.drawable.hand_icon);
 //            model.setTitle(data.getString(1));
@@ -83,19 +87,16 @@ public class HistoryActivity extends AppCompatActivity {
         return listData;
     }
 
-    private void toastMessage(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
 
     // Xử lý sự kiện ở đây
     private void addEvents() {
         // Sự kiện cho nút Back trên thanh Toolbar
-        toolbarHistory.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        toolbarHistory.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
         // Sự kiện chọn tất cả lịch sử
         chkSelectAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,26 +147,41 @@ public class HistoryActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(HistoryActivity.this, "Bạn đã nhập: " + query, Toast.LENGTH_LONG).show();
-                return true;
+                models = databaseHelper.searchByName(query);
+                if (models.size() > 0) {
+                    HistoryAdapter adapter = new HistoryAdapter(HistoryActivity.this, models);
+                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HistoryActivity.this);
+                    recyclerView.setLayoutManager(linearLayoutManager);
+                    recyclerView.setAdapter(adapter);
+                    txtNoData.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                    return true;
+                } else {
+                    recyclerView.setVisibility(View.GONE);
+                    txtNoData.setVisibility(View.VISIBLE);
+                    return false;
+                }
             }
 
             @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
+            public boolean onQueryTextChange(String query) {
+
+                models = databaseHelper.searchByName(query);
+                if (models.size() > 0) {
+                    HistoryAdapter adapter = new HistoryAdapter(HistoryActivity.this, models);
+                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HistoryActivity.this);
+                    recyclerView.setLayoutManager(linearLayoutManager);
+                    recyclerView.setAdapter(adapter);
+                    txtNoData.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                    return true;
+                } else {
+                    recyclerView.setVisibility(View.GONE);
+                    txtNoData.setVisibility(View.VISIBLE);
+                    return false;
+                }
             }
         });
         return true;
     }
-
-    // handle actionbar item clicks
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mnuSearch:
-                Toast.makeText(HistoryActivity.this, "Search Selected", Toast.LENGTH_LONG).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }

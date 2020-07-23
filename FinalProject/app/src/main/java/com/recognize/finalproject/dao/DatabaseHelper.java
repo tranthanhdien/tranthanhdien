@@ -7,6 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.recognize.finalproject.R;
+import com.recognize.finalproject.model.Model;
+
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Thesis";
     private static final String TAG = "DatabaseHelper";
@@ -84,18 +89,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
     }
 
-    /**
-     * Updates the name field
-     *
-     * @param newName
-     * @param id
-     * @param oldName
-     */
-    public void updateName(String newName, int id, String oldName) {
+    public void updateName(String oldName, String newName) {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "UPDATE " + TABLE_NAME + " SET " + NAME +
-                " = '" + newName + "' WHERE " + ID + " = '" + id + "'" +
-                " AND " + NAME + " = '" + oldName + "'";
+                " = '" + newName + "' WHERE " + NAME + " = '" + oldName + "'";
         Log.d(TAG, "updateName: query: " + query);
         Log.d(TAG, "updateName: Setting name to " + newName);
         db.execSQL(query);
@@ -110,12 +107,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
     }
     // Xóa dựa vào id
-    public void searchByName(String name) {
+    public ArrayList<Model> searchByName(String name) {
+        ArrayList<Model> models = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME + " WHERE "
-                + NAME + " = '" + name + "'";
-        Log.d(TAG, "Select: query: " + query);
-        db.execSQL(query);
+                + NAME + " LIKE '%" + name + "%'";
+        Cursor cursor = db.rawQuery(query, null);
+        // lặp các hàng và thêm vào list
+//        if (cursor.moveToFirst()) {
+//            do {
+//                Model model = new Model();
+//                model.setTitle(cursor.getString(0));
+//                model.setDescription(cursor.getString(1));
+//                model.setImg(Integer.parseInt(cursor.getString(0)));
+//                // thêm vào list
+//                models.add(model);
+//            } while (cursor.moveToNext());
+//        }
+        while (cursor.moveToNext()) {
+//            model.setImg(R.drawable.hand_icon);
+//            model.setTitle(data.getString(1));
+//            model.setDescription("This is news feed description");
+            models.add(new Model(cursor.getString(1), cursor.getString(2), R.drawable.hand_icon));
+        }
+        return models;
+
+        //db.execSQL(query);
     }
 
     // Xóa tất cả

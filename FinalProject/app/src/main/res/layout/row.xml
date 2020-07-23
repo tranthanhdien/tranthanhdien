@@ -8,24 +8,22 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:layout_height="wrap_content">
-    
-    
+
     <RelativeLayout
+        android:padding="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imgViewHistory"
             android:src="@drawable/hand_icon"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             ></ImageView>
         <TextView
             android:id="@+id/txtTitle"
             android:text="Title"
-            android:textSize="19sp"
-
+            android:textSize="18sp"
             android:textColor="#040400"
             android:layout_toRightOf="@id/imgViewHistory"
             android:layout_toEndOf="@id/imgViewHistory"
@@ -51,7 +49,7 @@
 
         <CheckBox
             android:id="@+id/checkbox"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="-10dp"
             android:layout_width="52dp"
             android:layout_height="52dp"
