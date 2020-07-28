@@ -50,15 +50,17 @@ public class HistoryActivity extends AppCompatActivity {
 
         // ẩn thanh ActionBar đi
         //getSupportActionBar().hide();
-        getSupportActionBar().setTitle("Lịch sử tìm kiếm");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_back);
+//        getSupportActionBar().setTitle("Lịch sử tìm kiếm");
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setIcon(R.drawable.ic_back);
 
 
-//        // ánh xạ
-//        toolbarHistory = (Toolbar) findViewById(R.id.toolBarHistory);
-//        // Chú ý phải để như thế này nếu không menu sẽ không hiển thị (Quan trọng)
-//        toolbarHistory.inflateMenu(R.menu.menu_history);
+        // ánh xạ
+        toolbarHistory = (Toolbar) findViewById(R.id.toolBarHistory);
+        toolbarHistory.setTitle("Lịch sử tìm kiếm");
+        setSupportActionBar(toolbarHistory);
+        // Chú ý phải để như thế này nếu không menu sẽ không hiển thị (Quan trọng)
+        //toolbarHistory.inflateMenu(R.menu.menu_history);
 
         txtNoData = (TextView) findViewById(R.id.txtNoData);
         chkSelectAll = (CheckBox) findViewById(R.id.chkSelectAll);
@@ -91,12 +93,12 @@ public class HistoryActivity extends AppCompatActivity {
     // Xử lý sự kiện ở đây
     private void addEvents() {
         // Sự kiện cho nút Back trên thanh Toolbar
-//        toolbarHistory.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        toolbarHistory.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         // Sự kiện chọn tất cả lịch sử
         chkSelectAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +109,8 @@ public class HistoryActivity extends AppCompatActivity {
                     builder.setTitle("Thông báo!");
                     builder.setMessage("Bạn có chắc chắn muốn xóa " + listData.size() + " lịch sử?");
                     builder.setIcon(R.drawable.ic_notification);
+
+                    //new HistoryAdapter().selectAll();
                     // Cài đặt button Cancel- Hiển thị Toast
                     builder.setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {

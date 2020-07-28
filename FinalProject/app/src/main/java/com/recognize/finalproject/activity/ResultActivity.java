@@ -128,42 +128,13 @@ public class ResultActivity extends AppCompatActivity {
             //Toast.makeText(ResultActivity.this, "OpenCV 3.4.7 not loaded", Toast.LENGTH_LONG).show();
         }
 
-        getSupportActionBar().hide(); // ẩn thanh ActionBar đi
+        //getSupportActionBar().hide(); // ẩn thanh ActionBar đi
         // Phải để databaseHelper lên trước, không sẽ bị lỗi ngay
         databaseHelper = new DatabaseHelper(this);
         addControls(); // ánh xạ
         getDataIntent(); // lấy dữ liệu intent gửi qua
         addEvents(); // xử lý sự kiện
 
-    }
-
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        String tex =
-//                " \\(2x^2 + 2x - 1 = 0\\) " +
-//                        "$$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$";
-//        String text = "\\" + result + "\\";
-//
-//        formula_one = (MathView) findViewById(R.id.formula_one);
-//        formula_one.setText(tex);
-//    }
-
-    // hàm show từng bước giải
-    public String showStepbyStep() {
-        for (int i = 0; i < result; i++) {
-
-
-        }
-        return "";
-    }
-
-    // hàm giải phương trình bậc 2
-    public String equation2(int a, int b, int c) {
-        double delta = (b * b) - (4 * a * c);
-        double x1 = (-b + Math.sqrt(delta)) / (2 * a);
-        double x2 = (-b - Math.sqrt(delta)) / (2 * a);
-        return x1 + "" + x2;
     }
 
     public double xRoot(double a, double x) {
@@ -191,7 +162,7 @@ public class ResultActivity extends AppCompatActivity {
             if (Math.abs(d) < Math.pow(10.0, -11.0)) {
                 d = 0;
             }
-            // 3 cases: D > 0, D == 0, D <0
+            // 3 cases: D > 0, D == 0, D < 0
             if (d > 1e-20) {
                 u = xRoot(-q / 2.0 + Math.sqrt(d), 3.0);
                 v = xRoot(-q / 2.0 - Math.sqrt(d), 3.0);
@@ -596,7 +567,7 @@ public class ResultActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     Log.d("Lỗi", e.getMessage());
                 }
-                Toast.makeText(ResultActivity.this, "Sửa thành công", Toast.LENGTH_LONG).show();
+                FancyToast.makeText(ResultActivity.this, "Sửa thành công!", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, true).show();
             }
         });
         imgViewShow.setOnClickListener(new View.OnClickListener() {
@@ -605,7 +576,6 @@ public class ResultActivity extends AppCompatActivity {
 
             }
         });
-
 
         // sự kiện khi nhấn nút xem chi tiết
         btnSolveDetail.setOnClickListener(new View.OnClickListener() {

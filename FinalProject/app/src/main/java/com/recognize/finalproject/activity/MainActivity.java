@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // ẩn thanh ActionBar đi
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         // camera permission
         cameraPermission = new String[]{Manifest.permission.CAMERA,

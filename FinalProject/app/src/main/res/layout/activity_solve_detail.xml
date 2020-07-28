@@ -3,27 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context=".activity.SolveDetailActivity">
 
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBarSolveDetail"
+        android:id="@+id/toolBarDetail"
         app:titleTextColor="#FFFFFF"
+        app:subtitleTextColor="#FFFFFF"
         app:navigationIcon="@drawable/ic_back"
         android:background="?attr/colorPrimary"
         android:layout_width="match_parent"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_height="?attr/actionBarSize">
-
     </androidx.appcompat.widget.Toolbar>
 
-    <ExpandableListView
-        android:id="@+id/expandable_listView"
+    <EditText
+        android:id="@+id/edtEquation"
+        android:layout_marginTop="20dp"
+        android:layout_height="52dp"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rectangular_input"
+        android:hint="@string/equation_hint"
+        android:textSize="17sp"
+        android:digits="@string/accepted_values"
+        android:inputType="text"
+        android:paddingLeft="10dp" />
+
+    <LinearLayout
+        android:id="@+id/wrapper"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
 
-    </ExpandableListView>
-
+    <TextView
+        android:id="@+id/txtError"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
 </LinearLayout>
+

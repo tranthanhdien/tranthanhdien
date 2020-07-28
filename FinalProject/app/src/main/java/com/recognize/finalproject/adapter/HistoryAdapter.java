@@ -60,6 +60,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         notifyItemRemoved(position);
         notifyDataSetChanged();
     }
+//    public void selectAll(){
+//        isSelectedAll=true;
+//        notifyDataSetChanged();
+//    }
+//    public void unselectall(){
+//        isSelectedAll=false;
+//        notifyDataSetChanged();
+//    }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {

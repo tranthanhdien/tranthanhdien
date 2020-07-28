@@ -31,7 +31,7 @@ public class GuideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
 
-        getSupportActionBar().hide(); // ẩn thanh ActionBar đi
+        //getSupportActionBar().hide(); // ẩn thanh ActionBar đi
         toolbar = (Toolbar) findViewById(R.id.toolBarGuide);
         toolbar.setTitle("Hướng dẫn sử dụng");
         dotsIndicator = (WormDotsIndicator) findViewById(R.id.dots_indicator);

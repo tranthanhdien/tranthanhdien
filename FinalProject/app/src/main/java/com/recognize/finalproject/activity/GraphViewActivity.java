@@ -39,7 +39,7 @@ public class GraphViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph_view);
 
-        getSupportActionBar().hide(); // ẩn thanh ActionBar đi
+        //getSupportActionBar().hide(); // ẩn thanh ActionBar đi
         addControls();
         addDataIntent();
         addEvents();

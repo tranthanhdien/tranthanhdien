@@ -10,6 +10,9 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
+    <string name="equation_hint">Enter a linear equation e.g 2x + 9 = 8</string>
+    <string name="accepted_values">0123456789()+-= abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
     <!-- Phần này cho ExpandableListView, chi tiết giải -->
     <string name="group1">Bước 1</string>
     <string name="group2">Bước 2</string>

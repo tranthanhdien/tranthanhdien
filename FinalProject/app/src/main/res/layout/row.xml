@@ -29,7 +29,7 @@
             android:layout_toEndOf="@id/imgViewHistory"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"></TextView>
         <TextView
             android:id="@+id/txtDescription"
@@ -42,7 +42,7 @@
             android:layout_below="@id/txtTitle"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="280dp"
             android:layout_height="wrap_content">
 
         </TextView>
